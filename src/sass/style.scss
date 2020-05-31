@@ -1,0 +1,151 @@
+// Color Scheme
+$white: rgba(255, 255, 255, 1);
+$gray: rgba(52, 58, 64, 1);
+$yellow: rgba(255, 176, 0, 1);
+$blue: rgba(32, 104, 118, 1);
+
+// Mixin
+@mixin background {
+  background: $bgUrl;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@mixin flexMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Variable
+$bgUrl: url("//eugenev.fun/randomwall.php");
+$bgcfooter: rgba(0, 0, 0, 0.8);
+
+// Style
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  @include background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+a:hover {
+  text-decoration: none !important;
+}
+.navbar-nav {
+  align-items: center;
+  margin: 0 20px 0 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: $yellow !important;
+}
+
+.navUnderlineNone:hover {
+  text-decoration: none !important;
+}
+
+bar-toggler {
+  border: 0px solid transparent;
+}
+
+.navList {
+  color: $white;
+  margin: 0 3vw 0 3vw;
+  & p {
+    margin: 0;
+  }
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.myBrand {
+  border-radius: 50%;
+  background-color: $yellow;
+  & span {
+    @include flexMain;
+    @include background;
+    font-family: "Poppins", sans-serif;
+    width: 40px;
+    height: 40px;
+    font-size: 130%;
+    font-weight: 800;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+.MainContent {
+  @include flexMain;
+  @include background;
+  color: $white;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.contentInner {
+  @include flexMain;
+  flex-direction: column;
+  width: 40rem;
+  height: 30rem;
+  border-radius: 30px;
+  @media (max-width: 812px) {
+    width: 20rem;
+    height: 30rem;
+  }
+  & h2 {
+    font-size: 5em;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+    @media (max-width: 812px) {
+      font-size: 3em;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .navbar {
+    background-color: $blue;
+    & .navbar-toggler {
+      border: none;
+    }
+  }
+  .footerContent {
+    & h2,
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+.footer {
+  @include flexMain;
+  background-color: $bgcfooter;
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  bottom: -160px;
+  overflow: hidden;
+}
+.footerContent {
+  width: 100%;
+  & h2 {
+    @include background;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 900;
+    padding: 0 50px 0 50px;
+  }
+  & h3 {
+    color: $yellow;
+  }
+}
