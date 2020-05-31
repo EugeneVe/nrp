@@ -6,41 +6,21 @@ import About from "./Components/About";
 import Product from "./Components/Product";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <div><Home /></div>
       <Router>
-        <>
-          <NavBar />
-        </>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+        <NavBar />
         <Switch>
-          <Route path="/home" component={Home}>
-            <Home />
-          </Route>
-          <Route path="/about" component={About}>
-            <About />
-          </Route>
-          <Route path="/product" component={Product}>
-            <Product />
-          </Route>
-          <Route path="/contact" component={Contact}>
-            <Contact />
-          </Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/product" exact component={Product} />
+          <Route path="/contact" exact component={Contact} />
         </Switch>
-        <>
-          <Footer />
-        </>
+        <Footer />
       </Router>
-
     </div>
   );
 }

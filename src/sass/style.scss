@@ -42,14 +42,8 @@ a:hover {
   text-decoration: none !important;
 }
 .navbar-nav {
-  align-items: center;
-  margin: 0 20px 0 0;
+  @include flexMain;
 }
-
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: $yellow !important;
-}
-
 .navUnderlineNone:hover {
   text-decoration: none !important;
 }
@@ -60,7 +54,7 @@ bar-toggler {
 
 .navList {
   color: $white;
-  margin: 0 3vw 0 3vw;
+  margin: 0 2vw 0 2vw;
   & p {
     margin: 0;
   }
@@ -112,7 +106,7 @@ bar-toggler {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 575px) {
   .navbar {
     background-color: $blue;
     & .navbar-toggler {
