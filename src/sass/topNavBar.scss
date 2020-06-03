@@ -1,0 +1,57 @@
+@import "../sass/style.scss";
+
+.topNavBar:before {
+  @include blureBefore;
+  top: 0px;
+}
+
+@media (max-width: 575px) {
+  .navbar {
+    background-color: $blue;
+    & .navbar-toggler {
+      border: none;
+    }
+  }
+}
+
+.navbar {
+  overflow: hidden;
+}
+.navbar-nav {
+  @include flexMain;
+}
+.navUnderlineNone:hover {
+  text-decoration: none !important;
+}
+
+bar-toggler {
+  border: 0px solid transparent;
+}
+
+.navList {
+  color: $white;
+  margin: 0 2vw 0 2vw;
+  & p {
+    margin: 0;
+  }
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.myBrand {
+  border-radius: 50%;
+  background-color: $yellow;
+  & span {
+    @include flexMain;
+    @include background;
+    background-image: $bgUrl;
+    font-family: "Poppins", sans-serif;
+    width: 40px;
+    height: 40px;
+    font-size: 130%;
+    font-weight: 800;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}

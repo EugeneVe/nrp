@@ -6,22 +6,23 @@ import About from "./Components/About";
 import Product from "./Components/Product";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Switch from 'react-router-transition-switch';
+import Fader from 'react-fader';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <NavBar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={About} />
-          <Route path="/product" exact component={Product} />
-          <Route path="/contact" exact component={Contact} />
-        </Switch>
-        <Footer />
-      </Router>
-    </div>
+    <Router>
+      <NavBar />
+      <Switch component={Fader}>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/product" component={Product} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+      <Footer />
+    </Router>
+
   );
 }
 

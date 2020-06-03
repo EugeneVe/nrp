@@ -1,0 +1,41 @@
+@import "../sass/style.scss";
+// Variable
+
+$bgcfooter: rgba(0, 0, 0, 0.8);
+
+.footer:before {
+  @include blureBefore;
+}
+
+.footer {
+  @include flexMain;
+  //   background-color: $bgcfooter;
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  bottom: -160px;
+  overflow: hidden;
+}
+.footerContent {
+  width: 100%;
+  & h2 {
+    @include background;
+    background-image: $bgUrl;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 900;
+    padding: 0 50px 0 50px;
+  }
+  & h3 {
+    color: $yellow;
+  }
+}
+
+@media (max-width: 575px) {
+  .footerContent {
+    & h2,
+    h3 {
+      text-align: center;
+    }
+  }
+}
