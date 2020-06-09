@@ -1,7 +1,8 @@
-import React from 'react';
-import '../sass/topNavBar.scss';
-import * as ReactBootStrap from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React from 'react'
+import '../sass/topNavBar.scss'
+import * as ReactBootStrap from "react-bootstrap"
+import { Link } from "react-router-dom"
+import Links from './Links'
 
 const NavBar = () => {
   return (
@@ -14,18 +15,7 @@ const NavBar = () => {
         <ReactBootStrap.Nav className="mr-auto">
         </ReactBootStrap.Nav>
         <ReactBootStrap.Nav>
-          <Link to="/" className="navUnderlineNone navList"><p>Home</p>
-            {/* <ReactBootStrap.Nav.Link href="#home"><p>Home</p></ReactBootStrap.Nav.Link> */}
-          </Link>
-          <Link to="/about" className="navUnderlineNone navList"><p>About</p>
-            {/* <ReactBootStrap.Nav.Link href="#about"><p>About</p></ReactBootStrap.Nav.Link> */}
-          </Link>
-          <Link to="/product" className="navUnderlineNone navList"><p>Product</p>
-            {/* <ReactBootStrap.Nav.Link href="#product"><p>Product</p></ReactBootStrap.Nav.Link> */}
-          </Link>
-          <Link to="/contact" className="navUnderlineNone navList"><p>Contact</p>
-            {/* <ReactBootStrap.Nav.Link href="#contact"><p>Contact</p></ReactBootStrap.Nav.Link> */}
-          </Link>
+          <Links />
         </ReactBootStrap.Nav>
       </ReactBootStrap.Navbar.Collapse>
     </ReactBootStrap.Navbar>

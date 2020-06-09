@@ -1,7 +1,11 @@
 @import "../sass/style.scss";
 
+.topNavBar {
+  background-color: $bgcolorNavFt;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
 .topNavBar:before {
-  @include blureBefore;
+  @include contentInnerBlur;
   top: 0px;
 }
 
@@ -29,8 +33,11 @@ bar-toggler {
 }
 
 .navList {
-  color: $white;
+  color: $gray;
   margin: 0 2vw 0 2vw;
+  @media (orientation: portrait) {
+    padding: 5px 0 5px 0;
+  }
   & p {
     margin: 0;
   }
@@ -42,6 +49,7 @@ bar-toggler {
 .myBrand {
   border-radius: 50%;
   background-color: $yellow;
+  margin: 0 0 0 15px;
   & span {
     @include flexMain;
     @include background;
