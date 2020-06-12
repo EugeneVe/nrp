@@ -50,6 +50,7 @@ bar-toggler {
   border-radius: 50%;
   background-color: $yellow;
   margin: 0 0 0 15px;
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.5);
   & span {
     @include flexMain;
     @include background;

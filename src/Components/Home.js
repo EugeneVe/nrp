@@ -1,7 +1,9 @@
 import React from 'react'
 import '../sass/home.scss'
 import Moment from 'react-moment'
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap'
+import Blurswitch from './Blurswitch'
+
 const currentHour = new Date().getHours();
 
 const greetingMessage =
@@ -20,35 +22,37 @@ class Home extends React.Component {
     }
 
     render() {
-        const UnBlured = '✓'
-        const Blured = '✕'
+        //google search form
+        window.onkeyup = keyup;
+        var inputTextValue;
+        function keyup(e) {
+            inputTextValue = e.target.value;
+            if (e.keyCode === 13) {
+                window.open('https://www.google.com.ua/search?q=' + inputTextValue, '_blank');
+            }
+        }
         return (
             <div className="MainContent">
                 <div className="containerWarp">
-                    <div
-                        className={this.state.active ? "round switch-on" : "round switch-off"}
-                        onClick={() => this.setState({ active: !this.state.active })}>
+                    <div className="googleSearchWrap">
                         {['top'].map(placement => (
-                            <OverlayTrigger
-                                key={placement}
-                                placement={placement}
-                                overlay={
-                                    <Tooltip id={`tooltip-${placement}`}>
-                                        Blur On/Off
-                                </Tooltip>
-                                }
-                            >
-                                <span>{this.state.active ? Blured : UnBlured}</span>
+                            <OverlayTrigger key={placement} placement={placement} overlay={
+                                <Tooltip id={`tooltip-${placement}`}>
+                                    Google search
+                                </Tooltip>}>
+                                <input className="googleSearch" placeholder="SearchG" title="google search" />
+
                             </OverlayTrigger>
                         ))}
                     </div>
                     <div className={this.state.active ? " light-on " : " contentInner "} />
-                    <h2><Moment format="HH:mm" /></h2>
-                    <p></p>
-                    <h1>{greetingMessage}</h1>
-                    <span>Today is  <Moment format="dddd DD.MM.YYYY" /></span>
+                    <div className="dateTimeContent">
+                        <h1>{greetingMessage}</h1>
+                        <span>Today is  <Moment format="dddd DD.MM.YYYY" /></span>
+                        <h2><Moment format="HH:mm" /></h2>
+                    </div>
+                    <Blurswitch />
                 </div>
-
             </div>
         );
     }
