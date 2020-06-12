@@ -1,46 +1,29 @@
 @import "../sass/style.scss";
 
-// TOOGLE switch on/off blur
-
-.round {
-  position: absolute;
-  width: 30px;
-  height: 30px;
+// Google Search
+.googleSearchWrap {
   display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  margin: 20px;
-  border-radius: 30%;
-}
-
-.switch-off {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
-  transition: all 1s;
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    transition: all 1s;
+  width: 100%;
+  & .googleSearch {
+    margin: 20px 0 30px 0;
+    width: 60%;
+    height: 40px;
+    padding: 15px;
+    background-color: rgba(170, 170, 170, 0.06);
+    border-radius: 20px;
+    border: none;
+    box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.3);
+    color: $gray;
+    @media (max-width: 1024px) {
+      width: 90%;
+    }
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $white;
+      opacity: 0.2;
+    }
   }
-}
-
-.switch-on {
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
-  color: #00919b;
-  transition: all 1s;
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    transition: all 1s;
-  }
-}
-
-.light-on:before {
-  @include contentInnerBlur;
-  transition: filter 1s, transform 1s;
-  filter: blur(0px) !important;
-  transform: scale(1) !important;
 }

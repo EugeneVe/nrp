@@ -1,12 +1,22 @@
 // Color Scheme
-$white: rgba(255, 255, 255, 1);
-$gray: rgba(52, 58, 64, 1);
-$yellow: rgb(13, 74, 99);
+$white: rgba(52, 58, 64, 1);
+$gray: rgba(224, 224, 224, 1);
+$yellow: rgba(245, 200, 0, 1);
 $blue: rgba(32, 104, 118, 1);
-$bgcolorNavFt: rgba(155, 155, 155, 1);
+$bgcolorNavFt: rgba(52, 58, 64, 1);
+$linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
+// $white: rgba(255, 255, 255, 1);
+// $gray: rgba(52, 58, 64, 1);
+// $yellow: rgb(13, 74, 99);
+// $blue: rgba(32, 104, 118, 1);
+// $bgcolorNavFt: rgba(155, 155, 155, 1);
+// $linerGradient: linear-gradient(
+//   rgba(196, 196, 196, 0.5),
+//   rgba(255, 255, 255, 0.3)
+// );
 
 // Variable
-$bgUrl: url("//h988070k.beget.tech/randomwall.php"); // h988070k.beget.tech/randomwall.php source.unsplash.com/user/erondu/1600x900
+$bgUrl: url("//source.unsplash.com/user/erondu/1600x900"); // h988070k.beget.tech/randomwall.php source.unsplash.com/user/erondu/1600x900
 $scale: scale(1.03);
 $blur: blur(10px);
 
@@ -28,7 +38,7 @@ $blur: blur(10px);
   flex-direction: column;
   position: absolute;
   width: 40%;
-  padding: 2%;
+  padding: 2% 2% 4% 2%;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   overflow: hidden;
@@ -46,11 +56,7 @@ $blur: blur(10px);
 }
 @mixin contentInnerBlur {
   content: "";
-  background: linear-gradient(
-      rgba(196, 196, 196, 0.5),
-      rgba(255, 255, 255, 0.3)
-    ),
-    $bgUrl;
+  background: $linerGradient, $bgUrl;
   @include background;
   position: absolute;
   left: 0px;
@@ -72,7 +78,9 @@ body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
-
+a:hover {
+  text-decoration: none !important;
+}
 // Scroll bar
 *::-webkit-scrollbar {
   width: 6px;
@@ -98,9 +106,88 @@ a:hover {
 }
 .containerWarp {
   @include containerWarp;
+  & .dateTimeContent {
+    width: 100%;
+    text-align: center;
+    & h1 {
+      font-size: calc(1rem + 2vw);
+    }
+  }
 }
 
 .contentInner:before {
   @include contentInnerBlur;
-  transition: filter 1s, transform 1s;
+  transition: all 500ms;
+}
+
+.contentInnerPages {
+  height: 80%;
+  width: 70% !important;
+  @media (max-width: 1024px) {
+    width: 90%;
+    width: 90% !important;
+    padding: 5% 5% 15% 5%;
+    height: calc(90% - 54px);
+  }
+}
+
+.anyPage {
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  & h2 {
+    text-align: center;
+  }
+}
+
+.flexColumn {
+  display: flex;
+  & ul {
+    flex: auto;
+  }
+}
+
+// TOOGLE switch on/off blur
+.round {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  border-radius: 50%;
+}
+
+.switch-off {
+  background-color: rgba(170, 170, 170, 0.06);
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 500ms;
+  &:hover {
+    background-color: rgba(170, 170, 170, 0.2);
+    color: $gray;
+    transition: all 500ms;
+  }
+}
+
+.switch-on {
+  background-color: rgba(170, 170, 170, 0.06);
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 500ms;
+  &:hover {
+    background-color: rgba(170, 170, 170, 0.2);
+    color: $gray;
+    transition: all 500ms;
+  }
+}
+
+.light-on:before {
+  @include contentInnerBlur;
+  transition: all 500ms;
+  filter: blur(0px) !important;
+  transform: scale(1) !important;
 }

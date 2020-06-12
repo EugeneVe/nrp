@@ -15,7 +15,7 @@ const Footer = () => {
                 <ReactBootStrap.Nav className="navbar-navCustom">
                     <Links />
                 </ReactBootStrap.Nav>
-                <span>© EugeneV 2020 - <Moment format="YYYY" /></span>
+                <span className="copyright">© EugeneV 2020 - <Moment format="YYYY" /></span>
             </ReactBootStrap.Navbar>
         </div>
     )

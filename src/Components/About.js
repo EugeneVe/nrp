@@ -1,12 +1,13 @@
 import React from 'react'
-import "../sass/about.scss";
+import "../sass/style.scss"
+import Blurswitch from './Blurswitch'
 
 const About = () => {
     return (
         <div className="MainContent">
             <div className="containerWarp contentInner contentInnerPages">
-                <div className="about">
-                    <h2>About Me</h2>
+                <div className="anyPage">
+                    <h2>About me</h2>
                     <h3>Hello, my name is Eugene Veprytskyi</h3>
                     <p>I`m web designer with several years of experience is looking for further training, challenges and experience while working towards a career in Web Design and UI-UX Design in an IT Company.</p>
                     <h3>Skills</h3>
@@ -52,6 +53,7 @@ const About = () => {
                         <li>Jurisprudence</li>
                     </ul>
                 </div>
+                <Blurswitch />
             </div >
         </div >
     )
