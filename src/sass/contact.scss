@@ -1,0 +1,133 @@
+@import "../sass/style.scss";
+@import "../sass/home.scss";
+
+// Social
+.fb {
+  color: #3b5998;
+}
+.ld {
+  color: #0e76a8;
+}
+.in {
+  color: #833ab4;
+}
+.tw {
+  color: #00acee;
+}
+.social {
+  @include flexMain;
+  margin: 20px 0 20px 0;
+  & ul {
+    padding: 0;
+    margin: 0;
+    & a {
+      display: flex;
+      align-items: center;
+      width: auto;
+      & li {
+        display: flex;
+        color: $gray;
+        opacity: 0.8;
+        list-style: none;
+        & p {
+          font-family: "Poppins", sans-serif;
+          padding: 0 5px 0 5px;
+          margin: 0;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+.social ul a {
+  & .txtOrigin {
+    transition: all 500ms linear;
+    &:hover {
+      opacity: 0;
+      transition: all 250ms linear;
+    }
+  }
+  &:hover .faOrigin {
+    visibility: visible;
+    padding-left: 35px;
+    opacity: 1;
+    transition: all 500ms linear;
+  }
+  &:hover .txtOrigin {
+    opacity: 0;
+  }
+  & .faOrigin {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 500ms linear;
+  }
+}
+.feedback {
+  text-align: center;
+}
+// Mail Form
+.mail {
+  @include flexMain;
+  flex-direction: column;
+  & form {
+    @include flexMain;
+    flex-direction: column;
+    & input:-internal-autofill-selected {
+      -webkit-appearance: menulist-button;
+      background-color: rgba(232, 240, 254, 0.5) !important;
+      background-image: none !important;
+      color: -internal-light-dark-color(black, white) !important;
+    }
+    & .formInner {
+      margin: 5px 0 5px 0;
+      width: 20vw;
+      @media (max-width: 1024px) {
+        width: 70vw;
+      }
+    }
+  }
+}
+.spam {
+  display: none;
+}
+
+.sendButton {
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  margin: 20px;
+  border: none;
+  border-radius: 25px;
+  color: $gray;
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type="file"] {
+  cursor: pointer;
+}
+
+input[type="file"]:before {
+  content: "";
+  text-align: left;
+  text-transform: uppercase;
+  color: $gray;
+  opacity: 0.6;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.icon {
+  position: relative;
+  & .userName,
+  .userPhone,
+  .userMail,
+  .userMessage,
+  .userAttach {
+    position: absolute;
+    margin: 18px 15px;
+    opacity: 0.5;
+  }
+}

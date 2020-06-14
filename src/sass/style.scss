@@ -18,7 +18,7 @@ $linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
 // Variable
 $bgUrl: url("//source.unsplash.com/user/erondu/1600x900"); // h988070k.beget.tech/randomwall.php source.unsplash.com/user/erondu/1600x900
 $scale: scale(1.03);
-$blur: blur(10px);
+$blur: blur(25px);
 
 // Mixin
 @mixin background {
@@ -70,7 +70,7 @@ $blur: blur(10px);
 }
 
 // Main Style
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+@import url("//fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
 
 body {
   @include background;
@@ -123,8 +123,12 @@ a:hover {
 .contentInnerPages {
   height: 80%;
   width: 70% !important;
-  @media (max-width: 1024px) {
-    width: 90%;
+  @media (max-width: 1024px) and (orientation: landscape) {
+    width: 90% !important;
+    padding: 5% 5% 8% 5%;
+    height: calc(90% - 54px);
+  }
+  @media (max-width: 1024px) and (orientation: portrait) {
     width: 90% !important;
     padding: 5% 5% 15% 5%;
     height: calc(90% - 54px);

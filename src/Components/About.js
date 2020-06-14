@@ -2,6 +2,7 @@ import React from 'react'
 import "../sass/style.scss"
 import Blurswitch from './Blurswitch'
 
+
 const About = () => {
     return (
         <div className="MainContent">
@@ -13,9 +14,9 @@ const About = () => {
                     <h3>Skills</h3>
                     <div className="flexColumn">
                         <ul>
-                            <li>HTML5</li>
-                            <li>CSS ( CSS3, SASS, LESS )</li>
-                            <li>JavaScript (ES6):
+                            <li>HTML5 - Deep Knowledge</li>
+                            <li>CSS ( CSS3, SASS, LESS ) - Deep Knowledge</li>
+                            <li>JavaScript (ES6) - Base:
                             <ul>
                                     <li>React</li>
                                     <li>AngularJS</li>
@@ -27,8 +28,8 @@ const About = () => {
                         <ul>
                             <li>Web Design</li>
                             <li>UI/UX Design</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Adobe Illustrator</li>
+                            <li>Adobe Photoshop - Deep Knowledge</li>
+                            <li>Adobe Illustrator - Deep Knowledge</li>
                             <li>Adobe XD</li>
                             <li>Figma</li>
                             <li>Experience with Git</li>
