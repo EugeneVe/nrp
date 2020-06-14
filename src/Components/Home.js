@@ -1,6 +1,8 @@
 import React from 'react'
 import '../sass/home.scss'
 import Moment from 'react-moment'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 import Blurswitch from './Blurswitch'
 
@@ -34,14 +36,14 @@ class Home extends React.Component {
         return (
             <div className="MainContent">
                 <div className="containerWarp">
-                    <div className="googleSearchWrap">
+                    <div className="formWrap">
                         {['top'].map(placement => (
                             <OverlayTrigger key={placement} placement={placement} overlay={
                                 <Tooltip id={`tooltip-${placement}`}>
                                     Google search
                                 </Tooltip>}>
-                                <input className="googleSearch" placeholder="SearchG" title="google search" />
-
+                                <div className="searchIcon"><FontAwesomeIcon icon={faSearch} className="googleSearch" />
+                                    <input className="formInner" title="google search" /></div>
                             </OverlayTrigger>
                         ))}
                     </div>
