@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:root {
+  --mainblockbg: url("//source.unsplash.com/1920x1080/?beach,bright");
+}
 // Color Scheme
 $white: rgba(52, 58, 64, 1);
 $gray: rgba(224, 224, 224, 1);
@@ -16,8 +21,9 @@ $linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
 // );
 
 // Variable
-$bgUrl: url("//source.unsplash.com/user/erondu/1600x900"); // h988070k.beget.tech/randomwall.php source.unsplash.com/user/erondu/1600x900
-$scale: scale(1.03);
+
+$bgUrl: url("//source.unsplash.com/user/erondu/1920x1080"); // h988070k.beget.tech/randomwall.php source.unsplash.com/user/erondu/1600x900
+$scale: scale(1.07);
 $blur: blur(25px);
 
 // Mixin
@@ -42,11 +48,12 @@ $blur: blur(25px);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   overflow: hidden;
-  @media (max-width: 1024px) {
+  @media (max-width: 1024px) and (orientation: landscape) {
     width: 90%;
     padding: 5%;
     height: calc(90% - 54px);
   }
+
   & h2 {
     font-size: 5em;
     @media (max-width: 1024px) {
@@ -56,7 +63,7 @@ $blur: blur(25px);
 }
 @mixin contentInnerBlur {
   content: "";
-  background: $linerGradient, $bgUrl;
+  background: $linerGradient, var(--mainblockbg);
   @include background;
   position: absolute;
   left: 0px;
@@ -70,14 +77,17 @@ $blur: blur(25px);
 }
 
 // Main Style
-@import url("//fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
-
-body {
-  @include background;
-  background-image: $bgUrl;
-  overflow-x: hidden;
-  font-family: "Poppins", sans-serif;
+div [alt="www.000webhost.com"] {
+  display: none;
 }
+* body {
+  font-family: "Lato", sans-serif;
+  @include background;
+  background-image: var(--mainblockbg);
+  background-color: $white !important;
+  overflow-x: hidden;
+}
+
 a:hover {
   text-decoration: none !important;
 }
@@ -94,7 +104,15 @@ a:hover {
 a:hover {
   text-decoration: none;
 }
-
+.switchBg {
+  position: absolute;
+  z-index: 999999;
+  border: hidden;
+  background: none;
+  &:focus {
+    outline: none;
+  }
+}
 // Pages Styles
 .MainContent {
   @include flexMain;
@@ -103,7 +121,24 @@ a:hover {
   position: absolute;
   width: 100%;
   height: 100vh;
+  animation: opacity 0.5s;
 }
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.MainContent::after {
+  content: "";
+  transition: all 1s;
+  opacity: 1;
+}
+
 .containerWarp {
   @include containerWarp;
   & .dateTimeContent {
@@ -136,10 +171,30 @@ a:hover {
 }
 
 .anyPage {
+  height: 100%;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  .faFeatherAlt {
+    text-align: center;
+  }
+  & .empty {
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media (max-width: 1024px) and (orientation: landscape) {
+      justify-content: end;
+    }
+    & p {
+      margin-top: 1rem;
+    }
+  }
   & h2 {
+    margin: 0 0 30px 0;
     text-align: center;
   }
 }

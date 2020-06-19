@@ -1,7 +1,8 @@
 import React from 'react'
 import "../sass/style.scss"
 import Blurswitch from './Blurswitch'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
     return (
@@ -9,6 +10,7 @@ const About = () => {
             <div className="containerWarp contentInner contentInnerPages">
                 <div className="anyPage">
                     <h2>About me</h2>
+                    <p className="faFeatherAlt"><FontAwesomeIcon icon={faFeatherAlt} /></p>
                     <h3>Hello, my name is Eugene Veprytskyi</h3>
                     <p>I`m web designer with several years of experience is looking for further training, challenges and experience while working towards a career in Web Design and UI-UX Design in an IT Company.</p>
                     <h3>Skills</h3>

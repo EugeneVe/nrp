@@ -2,38 +2,39 @@
 @import "../sass/home.scss";
 
 // Social
-.fb {
-  color: #3b5998;
-}
-.ld {
-  color: #0e76a8;
-}
-.in {
-  color: #833ab4;
-}
-.tw {
-  color: #00acee;
-}
+// .fb {
+//   color: #3b5998;
+// }
+// .ld {
+//   color: #0e76a8;
+// }
+// .in {
+//   color: #833ab4;
+// }
+// .tw {
+//   color: #00acee;
+// }
 .social {
-  @include flexMain;
+  display: flex;
+  justify-content: center;
   margin: 20px 0 20px 0;
+  padding: 0 30px 0 0;
   & ul {
     padding: 0;
     margin: 0;
     & a {
-      display: flex;
-      align-items: center;
-      width: auto;
       & li {
         display: flex;
         color: $gray;
         opacity: 0.8;
         list-style: none;
         & p {
-          font-family: "Poppins", sans-serif;
           padding: 0 5px 0 5px;
           margin: 0;
           font-size: 2.5rem;
+          @media (orientation: portrait) {
+            font-size: 2rem;
+          }
         }
       }
     }
