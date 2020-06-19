@@ -1,0 +1,27 @@
+@import "../sass/style.scss";
+
+.behProd {
+  width: 100%;
+  height: 60px;
+  & .behProdBtn {
+    font-size: 3em;
+    transition: all 100ms;
+    color: $gray;
+    & .txtBehance {
+      font-size: 0px;
+      margin: 0 !important;
+      opacity: 0;
+    }
+    &:hover {
+      filter: drop-shadow(0 5px 5px rgba(80, 59, 59, 0.3));
+      transition: all 100ms;
+      padding: 0 0 2px 0;
+      font-size: 3.5em;
+      opacity: 1;
+    }
+  }
+}
+a.behProdBtn :hover + .txtBehance {
+  opacity: 1;
+  font-size: 16px;
+}
