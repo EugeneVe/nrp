@@ -12,10 +12,12 @@ import { BrowserRouter as Router, Route } from "react-router-dom"
 import Switch from 'react-router-transition-switch'
 import Fader from 'react-fader'
 
-var walls = [
-  "url(//source.unsplash.com/1920x1080/?cars,bright)",
+const walls = [
+  "url(//source.unsplash.com/1920x1080/?cars,bright)"
   // "url(//h988070k.beget.tech/randomwall.php)"
 ];
+
+const wallUrl = ('--mainblockbg');
 
 function getWall() {
   return walls[
@@ -24,7 +26,7 @@ function getWall() {
 }
 
 function changeWall() {
-  document.documentElement.style.setProperty('--mainblockbg', getWall()); // Set the WALLPAPER from array
+  document.documentElement.style.setProperty(wallUrl, getWall()); // Set the WALLPAPER from array
 }
 
 function App() {
@@ -39,7 +41,7 @@ function App() {
         <Route path="/mailsent" component={Email} />
         <Route component={Page404} />
       </Switch>
-      <button className="switchBg" type="button" onClick={changeWall}>.</button>       {/* accessKey="h"  */}
+      <button className="switchBg" type="button" onClick={changeWall}>.</button>
       <Footer />
     </Router>
   );
