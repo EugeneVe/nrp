@@ -1,19 +1,6 @@
 @import "../sass/style.scss";
 @import "../sass/home.scss";
 
-// Social
-// .fb {
-//   color: #3b5998;
-// }
-// .ld {
-//   color: #0e76a8;
-// }
-// .in {
-//   color: #833ab4;
-// }
-// .tw {
-//   color: #00acee;
-// }
 .social {
   display: flex;
   justify-content: center;
@@ -105,21 +92,17 @@
   }
 }
 
-input[type="file"] {
-  cursor: pointer;
-}
-
-input[type="file"]:before {
-  content: "";
-  text-align: left;
-  text-transform: uppercase;
-  color: $gray;
-  opacity: 0.6;
-}
-
 input[type="file"]::-webkit-file-upload-button {
   visibility: hidden;
+  width: 0 !important;
 }
+input[type="file"] {
+  padding-top: 6px !important;
+  padding-left: 20px !important;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .icon {
   position: relative;
   & .userName,
@@ -131,4 +114,8 @@ input[type="file"]::-webkit-file-upload-button {
     margin: 18px 15px;
     opacity: 0.5;
   }
+}
+.message {
+  padding-top: 7px !important;
+  resize: none;
 }
