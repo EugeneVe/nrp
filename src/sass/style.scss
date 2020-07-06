@@ -161,6 +161,15 @@ a:hover {
   }
 }
 
+.textPcentered {
+  text-align: center;
+  h2 {
+    font-weight: 100;
+  }
+  p {
+    margin: 0;
+  }
+}
 .contentInner:before {
   @include contentInnerBlur;
   transition: all 500ms;
