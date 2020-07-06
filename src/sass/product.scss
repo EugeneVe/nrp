@@ -6,14 +6,14 @@
   & .behProdBtn {
     font-size: 3em;
     transition: all 100ms;
-    color: $gray;
+    color: $white;
     & .txtBehance {
       font-size: 0px;
       margin: 0 !important;
       opacity: 0;
     }
     &:hover {
-      filter: drop-shadow(0 5px 5px rgba(80, 59, 59, 0.3));
+      @include nemorphFilter;
       transition: all 100ms;
       padding: 0 0 2px 0;
       font-size: 3.5em;

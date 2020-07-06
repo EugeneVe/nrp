@@ -22,13 +22,13 @@
     border-radius: 20px;
     border: none;
     box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.3);
-    color: $gray;
+    color: $white;
     padding: 0 55px 0 40px;
     &:focus {
       outline: none;
     }
     &::placeholder {
-      color: $gray;
+      color: $white;
       opacity: 0.6;
     }
   }
@@ -38,11 +38,12 @@
   position: relative;
   text-align: center;
   & .gSearchBtn {
-    width: 35px;
-    height: 35px;
+    color: $white;
+    width: 25px;
+    height: 25px;
     position: absolute;
-    top: 2px;
-    right: 2px;
+    top: 8px;
+    right: 8px;
     border-radius: 50%;
     border: none;
     &:focus {

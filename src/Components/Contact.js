@@ -1,16 +1,20 @@
-import React from "react";
-import "../sass/contact.scss";
-import Blurswitch from "./Blurswitch";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faPhone, faEnvelope, faComment, faPaperclip } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faFacebookSquare, faTwitterSquare, faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
+import React from "react"
+import "../sass/contact.scss"
+import Blurswitch from "./Blurswitch"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons"
+import { faUser, faPhone, faEnvelope, faComment, faPaperclip } from "@fortawesome/free-solid-svg-icons"
+import { faLinkedin, faFacebookSquare, faTwitterSquare, faInstagramSquare } from "@fortawesome/free-brands-svg-icons"
 
-function Contact() {
+const Contact = () => {
   return (
     <div className="MainContent">
       <div className="containerWarp contentInner contentInnerPages">
         <div className="anyPage">
           <h2>Contacts</h2>
+          <p className="faFeatherAlt">
+            <FontAwesomeIcon icon={faFeatherAlt} />
+          </p>
           <div className="social">
             <ul>
               <a href="//www.facebook.com/wwwclick/" target="_blank" rel="noopener noreferrer">
@@ -79,6 +83,6 @@ function Contact() {
         <Blurswitch />
       </div>
     </div>
-  );
+  )
 }
-export default Contact;
+export default Contact

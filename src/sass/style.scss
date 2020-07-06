@@ -1,25 +1,15 @@
-@import url("//fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
-@import url("//fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 :root {
   --mainblockbg: url("//source.unsplash.com/1920x1080/?beach,bright");
 }
 // Color Scheme
-$white: rgba(52, 58, 64, 1);
-$gray: rgba(224, 224, 224, 1);
-$yellow: rgba(245, 200, 0, 1);
-$blue: rgba(32, 104, 118, 1);
+$white: rgba(224, 224, 224, 1);
+$gray: rgba(52, 58, 64, 1);
+$hoverColor: rgb(110, 187, 201);
+$blue: rgb(32, 105, 118);
 $bgcolorNavFt: rgba(52, 58, 64, 1);
 $linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
-// $white: rgba(255, 255, 255, 1);
-// $gray: rgba(52, 58, 64, 1);
-// $yellow: rgb(13, 74, 99);
-// $blue: rgba(32, 104, 118, 1);
-// $bgcolorNavFt: rgba(155, 155, 155, 1);
-// $linerGradient: linear-gradient(
-//   rgba(196, 196, 196, 0.5),
-//   rgba(255, 255, 255, 0.3)
-// );
 
 // Variable
 
@@ -28,6 +18,13 @@ $scale: scale(1.07);
 $blur: blur(25px);
 
 // Mixin
+@mixin nemorphBox {
+  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.3), -2px -2px 6px 0 rgba(255, 255, 255, 0.25);
+}
+@mixin nemorphFilter {
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4)) drop-shadow(-4px -4px 6px rgba(255, 255, 255, 0.3));
+}
+
 @mixin background {
   background-position: center;
   background-repeat: no-repeat;
@@ -56,13 +53,13 @@ $blur: blur(25px);
   }
 
   & h2 {
-    font-family: "Lato", sans-serif;
     font-size: 5em;
     @media (max-width: 1024px) {
       font-size: 3em;
     }
   }
 }
+
 @mixin contentInnerBlur {
   content: "";
   background: $linerGradient, var(--mainblockbg);
@@ -85,6 +82,7 @@ div [alt="www.000webhost.com"] {
 
 * {
   font-family: "Lato", sans-serif;
+  font-weight: 300;
 }
 
 body {
@@ -107,7 +105,7 @@ a:hover {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: $gray;
+  background: $white;
 }
 
 a:hover {
@@ -126,12 +124,11 @@ a:hover {
 .MainContent {
   @include flexMain;
   margin: 27px 0 0 0;
-  color: $gray;
+  color: $white;
   position: absolute;
   width: 100%;
   height: 100vh;
   animation: opacity 0.5s;
-  font-family: "Lato", sans-serif;
 }
 
 @keyframes opacity {
@@ -151,11 +148,15 @@ a:hover {
 
 .containerWarp {
   @include containerWarp;
-  & .dateTimeContent {
+  .dateTimeContent {
     width: 100%;
     text-align: center;
-    & h1 {
+    h2 time {
+      font-weight: 100;
+    }
+    h1 {
       font-size: calc(1rem + 2vw);
+      font-weight: 100;
     }
   }
 }
@@ -187,8 +188,14 @@ a:hover {
   overflow-x: hidden;
   .faFeatherAlt {
     text-align: center;
+    padding: 10px 0 10px 0;
   }
-  & .empty {
+  h2 {
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .empty {
     justify-content: center;
     height: 100%;
     width: 100%;
@@ -199,19 +206,12 @@ a:hover {
     @media (max-width: 1024px) and (orientation: landscape) {
       justify-content: end;
     }
-    & p {
-      margin-top: 1rem;
-    }
-  }
-  & h2 {
-    margin: 0 0 30px 0;
-    text-align: center;
   }
 }
 
 .flexColumn {
   display: flex;
-  & ul {
+  ul {
     flex: auto;
   }
 }
@@ -234,22 +234,22 @@ a:hover {
 
 .switch-off {
   background-color: rgba(170, 170, 170, 0.06);
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+  @include nemorphBox;
   transition: all 500ms;
   &:hover {
-    background-color: rgba(170, 170, 170, 0.2);
-    color: $gray;
+    background-color: rgba($color: $hoverColor, $alpha: 0.8);
+    color: $white;
     transition: all 500ms;
   }
 }
 
 .switch-on {
   background-color: rgba(170, 170, 170, 0.06);
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+  @include nemorphBox;
   transition: all 500ms;
   &:hover {
-    background-color: rgba(170, 170, 170, 0.2);
-    color: $gray;
+    background-color: rgba($color: $hoverColor, $alpha: 0.8);
+    color: $white;
     transition: all 500ms;
   }
 }
