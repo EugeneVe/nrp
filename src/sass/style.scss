@@ -6,7 +6,7 @@
 // Color Scheme
 $white: rgba(224, 224, 224, 1);
 $gray: rgba(52, 58, 64, 1);
-$hoverColor: rgb(110, 187, 201);
+$hoverColor: rgba(255, 255, 255, 0.3);
 $blue: rgb(32, 105, 118);
 $bgcolorNavFt: rgba(52, 58, 64, 1);
 $linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
@@ -14,8 +14,8 @@ $linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
 // Variable
 
 $bgUrl: url("//source.unsplash.com/user/erondu/1920x1080"); // h988070k.beget.tech/randomwall.php source.unsplash.com/user/erondu/1600x900
-$scale: scale(1.07);
-$blur: blur(25px);
+$scale: scale(1.06);
+$blur: blur(20px);
 
 // Mixin
 @mixin nemorphBox {
@@ -88,6 +88,7 @@ div [alt="www.000webhost.com"] {
 body {
   @include background;
   background-image: var(--mainblockbg);
+  transition: background-image 0.2s ease;
   background-color: $white !important;
   overflow-x: hidden;
   margin: 0;
@@ -111,15 +112,7 @@ a:hover {
 a:hover {
   text-decoration: none;
 }
-.switchBg {
-  position: absolute;
-  z-index: 999999;
-  border: hidden;
-  background: none;
-  &:focus {
-    outline: none;
-  }
-}
+
 // Pages Styles
 .MainContent {
   @include flexMain;
@@ -246,7 +239,7 @@ a:hover {
   @include nemorphBox;
   transition: all 500ms;
   &:hover {
-    background-color: rgba($color: $hoverColor, $alpha: 0.8);
+    background-color: $hoverColor;
     color: $white;
     transition: all 500ms;
   }
@@ -257,7 +250,7 @@ a:hover {
   @include nemorphBox;
   transition: all 500ms;
   &:hover {
-    background-color: rgba($color: $hoverColor, $alpha: 0.8);
+    background-color: $hoverColor;
     color: $white;
     transition: all 500ms;
   }
@@ -266,6 +259,6 @@ a:hover {
 .light-on:before {
   @include contentInnerBlur;
   transition: all 500ms;
-  filter: blur(0px) !important;
-  transform: scale(1) !important;
+  filter: none !important;
+  transform: none !important;
 }
