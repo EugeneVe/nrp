@@ -46,6 +46,10 @@
     right: 8px;
     border-radius: 50%;
     border: none;
+    svg {
+      margin-top: -5px;
+      fill: $white;
+    }
     &:focus {
       outline: none;
     }

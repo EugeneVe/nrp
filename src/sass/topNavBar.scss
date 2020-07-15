@@ -74,7 +74,7 @@ bar-toggler {
   background-color: rgba($color: #ffffff, $alpha: 0.05);
   transition: 300ms ease;
   &:hover {
-    background-color: rgba($color: $hoverColor, $alpha: 0.8);
+    background-color: $hoverColor;
     transition: 300ms ease;
   }
   @include nemorphBox;
@@ -90,5 +90,32 @@ bar-toggler {
     font-weight: 800;
     color: transparent;
     background-clip: text;
+  }
+}
+
+.switchBg {
+  @include flexMain;
+  @include nemorphBox;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  transition: 300ms ease;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: $hoverColor;
+    transition: 300ms ease;
+  }
+  &:hover svg {
+    transform: rotate(360deg);
+    transition: transform 10s ease;
+  }
+
+  svg {
+    transition: transform 2s ease;
+    fill: $white;
+    width: 20px;
+    height: 20px;
   }
 }
