@@ -1,13 +1,9 @@
 import React from "react"
 import "../sass/topNavBar.scss"
 
-const walls = [
-  "url(//source.unsplash.com/1920x1080/?beach,bright)",
-  "url(//source.unsplash.com/1920x1080/?cars,bright)",
-  "url(//h988070k.beget.tech/randomwall.php)",
-]
+const walls = require("../json/walls.json")
 const wallUrl = "--mainblockbg"
-let wallIndex = 1
+let wallIndex = [1]
 function countWall() {
   if (wallIndex > 2) {
     wallIndex = 0

@@ -17,7 +17,7 @@ const Links = () => {
       <Link to="/contact" className="navUnderlineNone navList">
         <p>Contact</p>
       </Link>
-      <Link className="navUnderlineNone navList">
+      <Link to="#" className="navUnderlineNone navList">
         <Wallnext />
       </Link>
     </>
