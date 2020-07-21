@@ -80,15 +80,20 @@
     @include containerWarp;
     @media (max-width: 1024px) and (orientation: portrait) {
       width: 90%;
-      height: 250px !important;
-      padding: 10% 5% 0% 5%;
+      height: 310px !important;
+      padding: 10% 5% 10% 5%;
       height: calc(90% - 54px);
     }
     & .dateTimeContent {
       width: 100%;
       text-align: center;
+      margin: 5% 0 0 0;
       & h1 {
         font-size: calc(1rem + 2vw);
+      }
+      & h3 {
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
       }
     }
   }

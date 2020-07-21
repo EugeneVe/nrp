@@ -1,20 +1,21 @@
 import React from "react"
+import walls from "../json/walls.json"
 import "../sass/topNavBar.scss"
 
-const walls = require("../json/walls.json")
+// Set the WALLPAPER from array
 const wallUrl = "--mainblockbg"
 let wallIndex = [1]
-function countWall() {
+const countWall = () => {
   if (wallIndex > 2) {
     wallIndex = 0
   }
   return wallIndex++
 }
-function getWall() {
+const getWall = () => {
   return walls[countWall()]
 }
-function changeWall() {
-  document.documentElement.style.setProperty(wallUrl, getWall()) // Set the WALLPAPER from array
+const changeWall = () => {
+  document.documentElement.style.setProperty(wallUrl, getWall())
 }
 
 const Wallnext = () => {

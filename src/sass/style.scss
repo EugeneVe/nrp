@@ -73,6 +73,9 @@ $blur: blur(20px);
   filter: $blur;
   transform: $scale;
   z-index: -1;
+  @media (max-width: 1024px) {
+    background-size: 1920px !important ;
+  }
 }
 
 // Main Style
@@ -92,8 +95,9 @@ body {
   background-color: $white !important;
   overflow-x: hidden;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @media (max-width: 1024px) {
+    background-size: 1920px !important ;
+  }
 }
 
 a:hover {
