@@ -4,11 +4,10 @@ import Moment from "react-moment"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import Blurswitch from "./Blurswitch"
+import quotesArrey from "../json/quotes.json"
 
-// Date
+// Date & Greeter
 const currentHour = new Date().getHours()
-
-// Greeter
 const greetingMessage =
   currentHour >= 4 && currentHour < 12
     ? "Good morning"
@@ -16,22 +15,11 @@ const greetingMessage =
     ? "Good afternoon"
     : currentHour > 17 || currentHour < 4
     ? "Good evening"
-    : "Welcome"(
-        //Google search form
-        document
-      ).ready(function () {
-        setInterval(
-          (window.onload = function () {
-            var form = document.querySelector("form")
-            form.addEventListener("submit", function (e) {
-              e.preventDefault()
-              var search = form.querySelector("input[type=search]")
-              search.value = "site:css-tricks.com " + search.value
-              form.submit()
-            })
-          })
-        )
-      })
+    : "Welcome"
+
+// Citats
+const randomQuote = Math.floor(Math.random() * quotesArrey.length)
+const quotes = quotesArrey[randomQuote]
 
 const Home = () => {
   return (
@@ -45,7 +33,7 @@ const Home = () => {
                 <form id="search" action="https://google.com/search" target="_blank" type="GET">
                   <input className="formInner" placeholder="google search" type="search" name="q" />
                 </form>
-                <button form="search" className="gSearchBtn switch-on" alt="Google search" type="submit">
+                <button form="search" className="gSearchBtn switch-on" alt="Google search" type="submit" title="search">
                   <svg width="15.846px" height="15.847px" viewBox="0 0 451.846 451.847">
                     <g>
                       <path
@@ -67,6 +55,7 @@ const Home = () => {
             <h2>
               <Moment format="HH:mm" />
             </h2>
+            <h3>{quotes}</h3>
           </div>
           <Blurswitch />
         </div>

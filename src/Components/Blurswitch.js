@@ -6,8 +6,6 @@ class Blurswitch extends React.Component {
   }
 
   render() {
-    const UnBlured = "✓"
-    const Blured = "✕"
     return (
       <>
         <div
@@ -15,7 +13,7 @@ class Blurswitch extends React.Component {
           className={this.state.active ? "round switch-on" : "round switch-off"}
           onClick={() => this.setState({ active: !this.state.active })}
         >
-          <span>{this.state.active ? Blured : UnBlured}</span>
+          <span>{this.state.active ? "✕" : "✓"}</span>
         </div>
         <div className={this.state.active ? " light-on " : " contentInner "} />
       </>
