@@ -2,11 +2,12 @@ import React from "react"
 import walls from "../json/walls.json"
 import "../sass/topNavBar.scss"
 
-// Set the WALLPAPER from array
+// Set the wallpaper from array
 const wallUrl = "--mainblockbg"
-let wallIndex = [1]
+const countLines = Object.keys(walls).length - 1 //count lines in json array
+let wallIndex = 1
 const countWall = () => {
-  if (wallIndex > 2) {
+  if (wallIndex > countLines) {
     wallIndex = 0
   }
   return wallIndex++
