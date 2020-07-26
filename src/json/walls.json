@@ -1,5 +1,11 @@
 [
-  "url(//source.unsplash.com/1920x1080/?beach,bright)",
-  "url(//source.unsplash.com/1920x1080/?cars,bright)",
+  "url(//source.unsplash.com/1920x1080/?beach)",
+  "url(//source.unsplash.com/1920x1080/?cars,)",
+  "url(//source.unsplash.com/1920x1080/?wood)",
+  "url(//source.unsplash.com/1920x1080/?butt)",
+  "url(//source.unsplash.com/1920x1080/?colors)",
+  "url(//source.unsplash.com/1920x1080/?city)",
+  "url(//source.unsplash.com/1920x1080/?streets)",
+  "url(//source.unsplash.com/1920x1080/?laptop)",
   "url(//source.unsplash.com/1920x1080/?programming)"
 ]
