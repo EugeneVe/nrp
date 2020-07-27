@@ -33,7 +33,7 @@ const Home = () => {
                 <form id="search" action="https://google.com/search" target="_blank" type="GET">
                   <input className="formInner" placeholder="google search" type="search" name="q" />
                 </form>
-                <button form="search" className="gSearchBtn switch-on" alt="Google search" type="submit" title="search">
+                <button form="search" className="gSearchBtn" alt="Google search" type="submit" title="search">
                   <svg width="15.846px" height="15.847px" viewBox="0 0 451.846 451.847">
                     <g>
                       <path

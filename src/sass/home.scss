@@ -21,7 +21,7 @@
     background-color: rgba(170, 170, 170, 0.06);
     border-radius: 20px;
     border: none;
-    box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: inset -2px -2px 9px 0 rgba(255, 255, 255, 0.25), inset 4px 4px 9px 0 rgba(0, 0, 0, 0.5);
     color: $white;
     padding: 0 55px 0 40px;
     &:focus {
@@ -40,18 +40,23 @@
   & .gSearchBtn {
     color: $white;
     width: 25px;
+    background-color: transparent;
     height: 25px;
     position: absolute;
     top: 8px;
     right: 8px;
     border-radius: 50%;
     border: none;
+    transition: all 0.5s;
     svg {
       margin-top: -5px;
       fill: $white;
     }
     &:focus {
       outline: none;
+    }
+    &:hover {
+      @include neomorphBoxHover;
     }
   }
   & .googleSearch {
