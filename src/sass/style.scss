@@ -16,10 +16,14 @@ $linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
 $bgUrl: url("//source.unsplash.com/user/erondu/1920x1080"); // h988070k.beget.tech/randomwall.php source.unsplash.com/user/erondu/1600x900
 $scale: scale(1.06);
 $blur: blur(20px);
-
 // Mixin
 @mixin nemorphBox {
-  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.3), -2px -2px 6px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3), -2px -2px 8px 0 rgba(255, 255, 255, 0.25);
+}
+@mixin neomorphBoxHover {
+  transition: all 0.5s;
+  @include nemorphBox;
+  border-radius: 50px;
 }
 @mixin nemorphFilter {
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4)) drop-shadow(-4px -4px 6px rgba(255, 255, 255, 0.3));
@@ -239,22 +243,18 @@ a:hover {
 }
 
 .switch-off {
-  background-color: rgba(170, 170, 170, 0.06);
-  @include nemorphBox;
   transition: all 500ms;
   &:hover {
-    background-color: $hoverColor;
+    @include nemorphBox;
     color: $white;
     transition: all 500ms;
   }
 }
 
 .switch-on {
-  background-color: rgba(170, 170, 170, 0.06);
-  @include nemorphBox;
   transition: all 500ms;
   &:hover {
-    background-color: $hoverColor;
+    @include nemorphBox;
     color: $white;
     transition: all 500ms;
   }
