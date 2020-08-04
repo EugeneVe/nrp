@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import Wallnext from "./Wallnext"
 
-const Links = () => {
-  return (
+const Links = () => (
     <>
       <Link to="/" className="navUnderlineNone navList">
         <p>Home</p>
@@ -22,6 +21,5 @@ const Links = () => {
       </Link>
     </>
   )
-}
 
 export default Links

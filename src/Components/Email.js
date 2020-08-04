@@ -5,8 +5,7 @@ import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons"
 
-const Email = () => {
-  return (
+const Email = () => (
     <div className="MainContent">
       <div className="home">
         <div className="containerWarp contentInner textPcentered">
@@ -23,6 +22,5 @@ const Email = () => {
       </div>
     </div>
   )
-}
 
 export default Email

@@ -5,8 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBehanceSquare } from "@fortawesome/free-brands-svg-icons"
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons"
 
-const Product = () => {
-  return (
+const Product = () => (
     <div className="MainContent">
       {/* <div className="product"> */}
       <div className="containerWarp contentInner contentInnerPages">
@@ -31,6 +30,6 @@ const Product = () => {
       </div>
     </div>
   )
-}
+
 
 export default Product

@@ -5,8 +5,7 @@ import * as ReactBootStrap from "react-bootstrap"
 import { Link } from "react-router-dom"
 import Moment from 'react-moment'
 
-const Footer = () => {
-    return (
+const Footer = () => (
         <div className="footerwrapper">
             <ReactBootStrap.Navbar fixed="top" expand="sm" variant="dark" className="bottomNavBar">
                 <Link to="/">
@@ -19,6 +18,6 @@ const Footer = () => {
             </ReactBootStrap.Navbar>
         </div>
     )
-}
+
 
 export default Footer;
