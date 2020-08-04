@@ -21,8 +21,7 @@ const greetingMessage =
 const randomQuote = Math.floor(Math.random() * quotesArrey.length)
 const quotes = quotesArrey[randomQuote]
 
-const Home = () => {
-  return (
+const Home = () => (
     <div className="MainContent">
       <div className="home">
         <div className="containerWarp contentInner">
@@ -62,6 +61,5 @@ const Home = () => {
       </div>
     </div>
   )
-}
 
 export default Home

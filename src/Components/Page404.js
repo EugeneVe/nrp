@@ -5,8 +5,7 @@ import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons"
 
-const Page404 = () => {
-  return (
+const Page404 = () => (
     <div className="MainContent">
       <div className="home">
         <div className="containerWarp contentInner textPcentered">
@@ -25,6 +24,6 @@ const Page404 = () => {
       </div>
     </div>
   )
-}
+
 
 export default Page404

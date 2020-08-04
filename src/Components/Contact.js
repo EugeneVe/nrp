@@ -6,8 +6,7 @@ import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons"
 import { faUser, faPhone, faEnvelope, faComment, faPaperclip } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedin, faFacebookSquare, faTwitterSquare, faInstagramSquare } from "@fortawesome/free-brands-svg-icons"
 
-const Contact = () => {
-  return (
+const Contact = () => (
     <div className="MainContent">
       <div className="containerWarp contentInner contentInnerPages">
         <div className="anyPage">
@@ -104,5 +103,5 @@ const Contact = () => {
       </div>
     </div>
   )
-}
+  
 export default Contact

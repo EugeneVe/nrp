@@ -4,23 +4,13 @@ import "../sass/topNavBar.scss"
 
 // Set the wallpaper from array
 const wallUrl = "--mainblockbg"
-const countLines = Object.keys(walls).length - 1 //count lines in json array
-let wallIndex = 1
-const countWall = () => {
-  if (wallIndex > countLines) {
-    wallIndex = 0
-  }
-  return wallIndex++
-}
-const getWall = () => {
-  return walls[countWall()]
-}
-const changeWall = () => {
-  document.documentElement.style.setProperty(wallUrl, getWall())
-}
+const countLines = Object.keys(walls).length-1 //count lines in json array
+let i = 1
+const countWall = () => i > countLines ? i=0 : i++
+const getWall = () => walls[countWall()]
+const changeWall = () => document.documentElement.style.setProperty(wallUrl, getWall())
 
-const Wallnext = () => {
-  return (
+const Wallnext = () => (
     <>
       <div className="switchBg" type="button" onClick={changeWall} title="Next background">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -28,7 +18,6 @@ const Wallnext = () => {
         </svg>
       </div>
     </>
-  )
-}
+    )
 
 export default Wallnext

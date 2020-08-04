@@ -4,8 +4,7 @@ import * as ReactBootStrap from "react-bootstrap"
 import { Link } from "react-router-dom"
 import Links from "./Links"
 
-const NavBar = () => {
-  return (
+const NavBar = () => (
     <ReactBootStrap.Navbar fixed="top" collapseOnSelect expand="sm" variant="dark" className="topNavBar">
       <Link to="/">
         <div className="myBrand">
@@ -21,5 +20,5 @@ const NavBar = () => {
       </ReactBootStrap.Navbar.Collapse>
     </ReactBootStrap.Navbar>
   )
-}
+
 export default NavBar
