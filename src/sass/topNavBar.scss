@@ -47,17 +47,17 @@ bar-toggler {
   outline: none !important;
 }
 .navbar-toggler-icon {
-  transition: all 0.5s ease;
+  transition: transform 500ms ease-in-out;
 }
 
 .navbar-toggler:focus:active .navbar-toggler-icon {
-  transition: transform 0.5s ease;
+  transition: transform 500ms ease-in-out;
   transform: scaleX(2);
 }
 .navList {
   color: $white;
   margin: 0 1vw 0 1vw;
-  transition: all 0.5s;
+  transition: box-shadow 500ms ease-in-out;
   padding: 3px 10px 3px 10px;
   border-radius: 50px;
   @media (orientation: portrait) {
@@ -76,10 +76,10 @@ bar-toggler {
 .myBrand {
   border-radius: 30%;
   background-color: rgba($color: #ffffff, $alpha: 0.05);
-  transition: 300ms ease;
+  transition: background-color 300ms ease-in-out;
   &:hover {
     background-color: $hoverColor;
-    transition: 300ms ease;
+    transition: background-color 300ms ease-in-out;
   }
   @include nemorphBox;
   & span {
@@ -102,20 +102,16 @@ bar-toggler {
   border-radius: 50%;
   width: 20px;
   height: 30px;
-  transition: 300ms ease;
   &:focus {
     outline: none;
   }
-  &:hover {
-    transition: 300ms ease;
-  }
   &:hover svg {
     transform: rotate(360deg);
-    transition: transform 10s ease;
+    transition: transform 10s ease-in;
   }
 
   svg {
-    transition: transform 2s ease;
+    transition: transform 2s ease-in;
     fill: $white;
     width: 20px;
     height: 20px;

@@ -4,9 +4,9 @@ import "../sass/topNavBar.scss"
 
 // Set the wallpaper from array
 const wallUrl = "--mainblockbg"
-const countLines = Object.keys(walls).length-1 //count lines in json array
-let i = 1
-const countWall = () => i > countLines ? i=0 : i++
+const countLines = Object.keys(walls).length //count lines in json array
+let counter = true
+const countWall = () => { if (counter >= countLines) {counter = 0}  return counter++ }
 const getWall = () => walls[countWall()]
 const changeWall = () => document.documentElement.style.setProperty(wallUrl, getWall())
 
