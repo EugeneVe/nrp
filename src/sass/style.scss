@@ -21,7 +21,7 @@ $blur: blur(20px);
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3), -2px -2px 8px 0 rgba(255, 255, 255, 0.25);
 }
 @mixin neomorphBoxHover {
-  transition: all 0.5s;
+  transition: box-shadow 500ms ease-in-out;
   @include nemorphBox;
   border-radius: 50px;
 }
@@ -95,7 +95,7 @@ div [alt="www.000webhost.com"] {
 body {
   @include background;
   background-image: var(--mainblockbg);
-  transition: background-image 0.2s ease;
+  transition: background-image 200ms ease-in-out;
   background-color: $white !important;
   overflow-x: hidden;
   margin: 0;
@@ -129,22 +129,6 @@ a:hover {
   position: absolute;
   width: 100%;
   height: 100vh;
-  animation: opacity 0.5s;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.MainContent::after {
-  content: "";
-  transition: all 1s;
-  opacity: 1;
 }
 
 .containerWarp {
@@ -173,7 +157,7 @@ a:hover {
 }
 .contentInner:before {
   @include contentInnerBlur;
-  transition: all 500ms;
+  transition: transform 500ms ease-in-out, filter 500ms ease-in-out;
 }
 
 .contentInnerPages {
@@ -243,26 +227,29 @@ a:hover {
 }
 
 .switch-off {
-  transition: all 500ms;
+  transition: box-shadow 500ms ease-in-out;
+  -webkit-transform: translate3d(0,0,0);
   &:hover {
     @include nemorphBox;
     color: $white;
-    transition: all 500ms;
+    -webkit-transform: translate3d(0,0,0);
   }
 }
 
 .switch-on {
-  transition: all 500ms;
+  transition: box-shadow 500ms ease-in-out;
+  -webkit-transform: translate3d(0,0,0);
   &:hover {
     @include nemorphBox;
     color: $white;
-    transition: all 500ms;
+    -webkit-transform: translate3d(0,0,0);
   }
 }
 
 .light-on:before {
   @include contentInnerBlur;
-  transition: all 500ms;
+  transition: transform 500ms ease-in-out, filter 500ms ease-in-out;
+  -webkit-transform: translate3d(0,0,0);
   filter: none !important;
   transform: none !important;
 }

@@ -30,13 +30,13 @@
 .social ul a {
   & .txtOrigin {
     margin-left: -20px;
-    transition: all 300ms ease;
+    transition: padding-left 300ms ease-in-out, opacity 300ms ease-in-out, filter 300ms ease-in-out;
   }
   &:hover .faOrigin {
     @include flexMain;
     padding-left: calc((225px / 2) - (35px / 2));
     opacity: 1;
-    transition: all 300ms ease;
+    transition: padding-left 300ms ease-in-out, opacity 300ms ease-in-out, filter 300ms ease-in-out;
     @include nemorphFilter;
     text-align: center;
   }
@@ -46,7 +46,6 @@
   }
   & .faOrigin {
     opacity: 0;
-    transition: all 300ms ease;
     filter: blur(50px);
   }
 }
@@ -84,7 +83,7 @@
   height: 30px;
   cursor: pointer;
   background: rgba(0, 0, 0, 0);
-  transition: all 0.5s;
+  transition: box-shadow 500ms ease-in-out, border-radius 500ms ease-in-out;
   margin: 20px;
   color: $white;
   border: none;
