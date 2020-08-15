@@ -14,20 +14,20 @@ $linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
 // Variable
 
 $bgUrl: url("//source.unsplash.com/user/erondu/1920x1080"); // h988070k.beget.tech/randomwall.php source.unsplash.com/user/erondu/1600x900
-$scale: scale(1.06);
+$scale: scale(1.04);
 $blur: blur(20px);
 // Mixin
 @mixin nemorphBox {
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3), -2px -2px 8px 0 rgba(255, 255, 255, 0.25);
 }
 @mixin neomorphBoxHover {
-  transition: box-shadow 500ms ease-in-out;
+  transition: box-shadow 500ms ease;
   @include nemorphBox;
   border-radius: 50px;
 }
-@mixin nemorphFilter {
-  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4)) drop-shadow(-4px -4px 6px rgba(255, 255, 255, 0.3));
-}
+// @mixin nemorphFilter {
+//   // filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4)) drop-shadow(-4px -4px 6px rgba(255, 255, 255, 0.3));
+// }
 
 @mixin background {
   background-position: center;
@@ -155,9 +155,22 @@ a:hover {
     margin: 0;
   }
 }
+
+// Blur On
 .contentInner:before {
   @include contentInnerBlur;
-  transition: transform 500ms ease-in-out, filter 500ms ease-in-out;
+  animation: blurOn 250ms ease;
+}
+
+@keyframes blurOn{
+  0% {
+    -webkit-filter: blur(0);
+    transform: scale(1);
+  }
+  100% {
+    filter: $blur;
+    transform: $scale;
+  }
 }
 
 .contentInnerPages {
@@ -227,29 +240,36 @@ a:hover {
 }
 
 .switch-off {
-  transition: box-shadow 500ms ease-in-out;
-  -webkit-transform: translate3d(0,0,0);
+  transition: box-shadow 500ms ease;
   &:hover {
     @include nemorphBox;
     color: $white;
-    -webkit-transform: translate3d(0,0,0);
   }
 }
 
 .switch-on {
-  transition: box-shadow 500ms ease-in-out;
-  -webkit-transform: translate3d(0,0,0);
+  // transition: box-shadow 500ms ease-in-out;
   &:hover {
     @include nemorphBox;
     color: $white;
-    -webkit-transform: translate3d(0,0,0);
   }
 }
 
+// Blur Off
 .light-on:before {
   @include contentInnerBlur;
-  transition: transform 500ms ease-in-out, filter 500ms ease-in-out;
-  -webkit-transform: translate3d(0,0,0);
-  filter: none !important;
-  transform: none !important;
+  animation: blurOff 500ms ease;
+  filter: none;
+  transform: none;
+}
+
+@keyframes blurOff{
+  0% {
+    filter: $blur;
+    transform: $scale;
+  }
+  100% {
+    filter: none;
+    transform: none;
+  }
 }
