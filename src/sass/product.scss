@@ -5,8 +5,7 @@
   height: 60px;
   & .behProdBtn {
     font-size: 3em;
-    transition: font-size 200ms ease-in-out;
-    transform: translate3d(0,0,0);
+    transition: font-size 200ms ease, opacity 200ms ease;
     color: $white;
     & .txtBehance {
       font-size: 0px;
@@ -14,13 +13,13 @@
       opacity: 0;
     }
     &:hover {
-      @include nemorphFilter;
       padding: 0 0 2px 0;
       font-size: 3.5em;
       opacity: 1;
     }
   }
 }
+
 a.behProdBtn :hover + .txtBehance {
   opacity: 1;
   font-size: 16px;

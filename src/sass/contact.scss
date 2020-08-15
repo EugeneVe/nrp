@@ -1,5 +1,4 @@
 @import "../sass/style.scss";
-@import "../sass/home.scss";
 
 .social {
   display: flex;
@@ -30,14 +29,13 @@
 .social ul a {
   & .txtOrigin {
     margin-left: -20px;
-    transition: padding-left 300ms ease-in-out, opacity 300ms ease-in-out, filter 300ms ease-in-out;
+    transition: padding-left 300ms ease, opacity 300ms ease, filter 300ms ease;
   }
   &:hover .faOrigin {
     @include flexMain;
     padding-left: calc((225px / 2) - (35px / 2));
     opacity: 1;
-    transition: padding-left 300ms ease-in-out, opacity 300ms ease-in-out, filter 300ms ease-in-out;
-    @include nemorphFilter;
+    transition: padding-left 300ms ease, opacity 300ms ease;
     text-align: center;
   }
   &:hover .txtOrigin {
@@ -46,7 +44,6 @@
   }
   & .faOrigin {
     opacity: 0;
-    filter: blur(50px);
   }
 }
 .feedback {
