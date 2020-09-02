@@ -76,20 +76,7 @@
 }
 
 .sendButton {
-  width: 60px;
-  height: 30px;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0);
-  transition: box-shadow 500ms ease-in-out, border-radius 500ms ease-in-out;
-  margin: 20px;
-  color: $white;
-  border: none;
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    @include neomorphBoxHover;
-  }
+  margin: 20px 0 0 0;
 }
 
 input[type="file"]::-webkit-file-upload-button {
@@ -118,4 +105,27 @@ input[type="file"] {
 .message {
   padding-top: 7px !important;
   resize: none;
+}
+.inpPreviewContainer {
+  position: relative;
+  @include flexMain;
+  @include nemorphBox;
+  margin: 20px 0 10px 0;
+  border-radius: 50%;
+  overflow: hidden;
+  .imgError {
+    position: absolute;
+    text-align: center;
+    @include flexMain;
+  }
+  #inpPreview {
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3) inset, -2px -2px 8px 0 rgba(255, 255, 255, 0.25) inset;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    margin: -3px;
+    z-index: 1;
+    transform: scale(0.9);
+  }
 }

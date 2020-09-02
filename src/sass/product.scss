@@ -5,22 +5,35 @@
   height: 60px;
   & .behProdBtn {
     font-size: 3em;
-    transition: font-size 200ms ease, opacity 200ms ease;
+    transition: font-size 200ms ease, opacity 200ms ease, filter 200ms ease;
     color: $white;
     & .txtBehance {
       font-size: 0px;
       margin: 0 !important;
-      opacity: 0;
     }
     &:hover {
       padding: 0 0 2px 0;
       font-size: 3.5em;
       opacity: 1;
+      filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.6)) drop-shadow(-2px -2px 8px rgba(255, 255, 255, 0.8));
     }
   }
 }
 
 a.behProdBtn :hover + .txtBehance {
-  opacity: 1;
-  font-size: 16px;
+  animation: behanceAnim 200ms ease 200ms;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes behanceAnim {
+  from {
+    opacity: 0;
+    font-size: 0px;
+    text-shadow: none;
+  }
+  to {
+    opacity: 1;
+    font-size: 16px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6), -2px -2px 8px rgba(255, 255, 255, 0.8);
+  }
 }

@@ -1,8 +1,8 @@
-import React from "react"
-import "../sass/style.scss"
-import Blurswitch from "./Blurswitch"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons"
+import React from "react";
+import "../sass/style.scss";
+import Blurswitch from "./Blurswitch";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
@@ -15,8 +15,8 @@ const About = () => {
           </p>
           <h3>Hello, my name is Eugene Veprytskyi</h3>
           <p>
-            I`m web designer with several years of experience is looking for further training, challenges and experience
-            while working towards a career in Web Design and UI-UX Design in an IT Company.
+            I`m web designer with several years of experience is looking for further training, challenges and experience while working towards a career in Web Design and UI-UX
+            Design in an IT Company.
           </p>
           <h3>Skills</h3>
           <div className="flexColumn">
@@ -50,8 +50,7 @@ const About = () => {
             <li>Experience in creating wireframes, mockups, prototypes;</li>
             <li>Creating full-stack projects based on Wordpress, Joomla;</li>
             <li>
-              Markup on HTML5, CSS3, SASS, LESS, JavaScript (ES6), Jquery, bootstrap (UI Bootstrap - AngularUI)
-              AngularJS, <b>React</b>;
+              Markup on HTML5, CSS3, SASS, LESS, JavaScript (ES6), Jquery, bootstrap (UI Bootstrap - AngularUI) AngularJS, <b>React</b>;
             </li>
             <li>Custom icons and UI elements designs.</li>
           </ul>
@@ -68,7 +67,7 @@ const About = () => {
         <Blurswitch />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
