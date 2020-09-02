@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
 class Blurswitch extends React.Component {
   state = {
     active: false,
-  }
+  };
 
   render() {
     return (
@@ -17,7 +17,7 @@ class Blurswitch extends React.Component {
         </div>
         <div className={this.state.active ? " light-on " : " contentInner "} />
       </>
-    )
+    );
   }
 }
-export default Blurswitch
+export default Blurswitch;

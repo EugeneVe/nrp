@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 :root {
-  --mainblockbg: url("//source.unsplash.com/1920x1080/?beach,bright");
+  --mainblockbg: url("//source.unsplash.com/1920x1080/?beach,bright"); // "url(//h988070k.beget.tech/randomwall.php)"
 }
 // Color Scheme
 $white: rgba(224, 224, 224, 1);
@@ -12,8 +12,6 @@ $bgcolorNavFt: rgba(52, 58, 64, 1);
 $linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
 
 // Variable
-
-$bgUrl: url("//source.unsplash.com/user/erondu/1920x1080"); // h988070k.beget.tech/randomwall.php source.unsplash.com/user/erondu/1600x900
 $scale: scale(1.04);
 $blur: blur(20px);
 // Mixin
@@ -25,10 +23,6 @@ $blur: blur(20px);
   @include nemorphBox;
   border-radius: 50px;
 }
-// @mixin nemorphFilter {
-//   // filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4)) drop-shadow(-4px -4px 6px rgba(255, 255, 255, 0.3));
-// }
-
 @mixin background {
   background-position: center;
   background-repeat: no-repeat;
@@ -40,7 +34,6 @@ $blur: blur(20px);
   justify-content: center;
   align-items: center;
 }
-
 @mixin containerWarp {
   @include flexMain;
   flex-direction: column;
@@ -55,7 +48,6 @@ $blur: blur(20px);
     padding: 5%;
     height: calc(90% - 54px);
   }
-
   & h2 {
     font-size: 5em;
     @media (max-width: 1024px) {
@@ -63,7 +55,6 @@ $blur: blur(20px);
     }
   }
 }
-
 @mixin contentInnerBlur {
   content: "";
   background: $linerGradient, var(--mainblockbg);
@@ -86,7 +77,13 @@ $blur: blur(20px);
 div [alt="www.000webhost.com"] {
   display: none;
 }
-
+button {
+  border: none;
+  background: none;
+  &:focus {
+    outline: none !important;
+  }
+}
 * {
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -153,23 +150,6 @@ a:hover {
   }
   p {
     margin: 0;
-  }
-}
-
-// Blur On
-.contentInner:before {
-  @include contentInnerBlur;
-  animation: blurOn 250ms ease;
-}
-
-@keyframes blurOn{
-  0% {
-    -webkit-filter: blur(0);
-    transform: scale(1);
-  }
-  100% {
-    filter: $blur;
-    transform: $scale;
   }
 }
 
@@ -241,6 +221,8 @@ a:hover {
 
 .switch-off {
   transition: box-shadow 500ms ease;
+  backface-visibility: hidden;
+  perspective: 1000;
   &:hover {
     @include nemorphBox;
     color: $white;
@@ -248,7 +230,7 @@ a:hover {
 }
 
 .switch-on {
-  // transition: box-shadow 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out;
   &:hover {
     @include nemorphBox;
     color: $white;
@@ -263,13 +245,22 @@ a:hover {
   transform: none;
 }
 
-@keyframes blurOff{
-  0% {
+@keyframes blurOff {
+  from {
     filter: $blur;
     transform: $scale;
   }
-  100% {
-    filter: none;
-    transform: none;
+}
+
+// Blur On
+.contentInner:before {
+  @include contentInnerBlur;
+  animation: blurOn 500ms ease;
+}
+
+@keyframes blurOn {
+  from {
+    -webkit-filter: blur(0);
+    transform: scale(1);
   }
 }
