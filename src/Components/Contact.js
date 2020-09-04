@@ -7,6 +7,8 @@ import { faUser, faPhone, faEnvelope, faComment, faPaperclip } from "@fortawesom
 import { faLinkedin, faFacebookSquare, faTwitterSquare, faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
 
 const loadImage = (event) => {
+  const wallUrl = "--mainblockbg";
+  document.documentElement.style.setProperty(wallUrl, "url(" + URL.createObjectURL(event.target.files[0]) + ")");
   const pic = document.getElementById("inpPreview");
   pic.src = URL.createObjectURL(event.target.files[0]);
   pic.onload = () => {
@@ -79,7 +81,7 @@ const Contact = () => (
             </div>
             <div className="icon">
               <FontAwesomeIcon icon={faPaperclip} className="userAttach" />
-              <input id="searchTxt" className="formInner" type="file" name="upload" onChange={loadImage} />
+              <input id="searchTxt" className="formInner" type="file" accept="image/*" title="Please choose image" onChange={loadImage} />
             </div>
             <input type="hidden" name="_next" />
             <input type="text" name="_gotcha" className="spam" />
