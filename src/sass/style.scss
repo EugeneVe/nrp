@@ -26,7 +26,7 @@ $blur: blur(20px);
 @mixin background {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover !important;
   background-attachment: fixed;
 }
 @mixin flexMain {
@@ -69,7 +69,10 @@ $blur: blur(20px);
   transform: $scale;
   z-index: -1;
   @media (max-width: 1024px) {
-    background-size: 1920px !important ;
+    background-size: cover !important;
+  }
+  @media (orientation: portrait) {
+    background-size: cover !important;
   }
 }
 
@@ -97,7 +100,10 @@ body {
   overflow-x: hidden;
   margin: 0;
   @media (max-width: 1024px) {
-    background-size: 1920px !important ;
+    background-size: cover !important;
+  }
+  @media (orientation: portrait) {
+    background-size: cover !important;
   }
 }
 
