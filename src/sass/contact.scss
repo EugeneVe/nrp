@@ -1,4 +1,4 @@
-@import "../sass/style.scss";
+@import "../sass/mixinsvars.scss";
 
 .social {
   display: flex;
@@ -10,7 +10,7 @@
     & a {
       & li {
         display: flex;
-        color: $white;
+        color: var(--white);
         opacity: 0.8;
         list-style: none;
         width: 225px;

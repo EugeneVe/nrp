@@ -16,8 +16,8 @@ const Page404 = () => (
         <p>
           Not Found <br /> Page you requested not found
         </p>
-        <Link to="/" className="navUnderlineNone navList">
-          <button className="sendButton switch-on">Home</button>
+        <Link to="/" className="navUnderlineNone navList sendButton">
+          <p>Home</p>
         </Link>
         <Blurswitch />
       </div>

@@ -1,16 +1,16 @@
-import React from "react"
-import "./sass/style.scss"
-import NavBar from "./Components/Navbar"
-import Home from "./Components/Home"
-import About from "./Components/About"
-import Product from "./Components/Product"
-import Contact from "./Components/Contact"
-import Footer from "./Components/Footer"
-import Page404 from "./Components/Page404"
-import Email from "./Components/Email"
-import { BrowserRouter as Router, Route } from "react-router-dom"
-import Switch from "react-router-transition-switch"
-import Fader from "react-fader"
+import React from "react";
+import "./sass/style.scss";
+import NavBar from "./Components/Navbar";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Product from "./Pages/Product";
+import Contact from "./Pages/Contact";
+import Footer from "./Components/Footer";
+import Page404 from "./Pages/Page404";
+import Email from "./Pages/Email";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Switch from "react-router-transition-switch";
+import Fader from "react-fader";
 
 const App = () => {
   return (
@@ -26,6 +26,6 @@ const App = () => {
       </Switch>
       <Footer />
     </Router>
-  )
-}
-export default App
+  );
+};
+export default App;

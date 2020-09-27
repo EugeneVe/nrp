@@ -1,7 +1,7 @@
-@import "../sass/style.scss";
+@import "../sass/mixinsvars.scss";
 
 .bottomNavBar {
-  background-color: $bgcolorNavFt;
+  background-color: var(--bgcolorNavFt);
   position: absolute !important;
   bottom: -200px;
   height: 200px;
@@ -33,5 +33,5 @@
   flex-flow: column;
 }
 .copyright {
-  color: $white;
+  color: var(--white);
 }
