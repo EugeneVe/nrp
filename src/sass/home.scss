@@ -1,4 +1,4 @@
-@import "../sass/style.scss";
+@import "../sass/mixinsvars.scss";
 
 // Google Search
 .searchWrapper {
@@ -22,13 +22,13 @@
     border-radius: 20px;
     border: none;
     box-shadow: inset -2px -2px 9px 0 rgba(255, 255, 255, 0.25), inset 4px 4px 9px 0 rgba(0, 0, 0, 0.5);
-    color: $white;
+    color: var(--white);
     padding: 0 55px 0 40px;
     &:focus {
       outline: none;
     }
     &::placeholder {
-      color: $white;
+      color: var(--white);
       opacity: 0.6;
     }
   }
@@ -38,7 +38,7 @@
   position: relative;
   text-align: center;
   & .gSearchBtn {
-    color: $white;
+    color: var(--white);
     width: 25px;
     background-color: transparent;
     height: 25px;
@@ -50,7 +50,7 @@
     transition: box-shadow 500ms ease;
     svg {
       margin-top: -5px;
-      fill: $white;
+      fill: var(--white);
     }
     &:focus {
       outline: none;
@@ -68,7 +68,6 @@
 }
 
 .dateTimeContent {
-  font-family: "Lato", sans-serif;
   margin: 20px 0;
   @media (max-width: 1024px) and (orientation: landscape) {
     margin: 0;
@@ -76,7 +75,6 @@
 }
 
 .dateTimeContent span {
-  font-family: "Lato", sans-serif;
   font-weight: 100 !important;
   font-size: 120%;
   * {
@@ -89,26 +87,7 @@
   width: 100%;
   height: 100vh;
 }
-.home {
-  & .containerWarp {
-    @include containerWarp;
-    @media (max-width: 1024px) and (orientation: portrait) {
-      width: 90%;
-      height: 310px !important;
-      padding: 10% 5% 10% 5%;
-      height: calc(90% - 54px);
-    }
-    & .dateTimeContent {
-      width: 100%;
-      text-align: center;
-      margin: 5% 0 0 0;
-      & h1 {
-        font-size: calc(1rem + 2vw);
-      }
-      & h3 {
-        font-family: "Lato", sans-serif;
-        font-weight: 100;
-      }
-    }
-  }
+
+.favorites {
+  @include flexMain;
 }
