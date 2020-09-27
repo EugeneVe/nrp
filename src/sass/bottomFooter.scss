@@ -17,7 +17,7 @@
 }
 
 .bottomNavBar:before {
-  @include contentInnerBlur;
+  @include contentInnerBlurTopBar;
   top: 0px;
 }
 
