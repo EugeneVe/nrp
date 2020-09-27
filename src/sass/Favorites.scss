@@ -1,0 +1,37 @@
+@import "../sass/mixinsvars.scss";
+
+.favorites {
+  width: 100%;
+}
+.favBtn {
+  opacity: 0.8;
+  margin: 10px 0 0 0;
+  padding: 0;
+  @include flexMain;
+  font-size: 1.1em;
+  font-weight: 300;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-5px);
+    transition: transform 500ms ease;
+  }
+}
+.svgImg {
+  opacity: 0.4;
+  width: 60px;
+  fill: var(--white);
+  padding: 10px 10px 0 10px;
+  &:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    transition: opacity 500ms ease, transform 1000ms ease;
+  }
+}
+.favInside {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  left: 0;
+}
