@@ -29,13 +29,13 @@
 .social ul a {
   & .txtOrigin {
     margin-left: -20px;
-    transition: padding-left 300ms ease, opacity 300ms ease, filter 300ms ease;
+    // transition: padding-left 300ms ease, opacity 300ms ease, filter 300ms ease;
   }
   &:hover .faOrigin {
     @include flexMain;
     padding-left: calc((225px / 2) - (35px / 2));
     opacity: 1;
-    transition: padding-left 300ms ease, opacity 300ms ease;
+    transition: padding-left 500ms ease, opacity 500ms ease;
     text-align: center;
   }
   &:hover .txtOrigin {

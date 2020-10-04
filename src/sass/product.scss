@@ -3,7 +3,7 @@
   height: 60px;
   & .behProdBtn {
     font-size: 3em;
-    transition: font-size 200ms ease, opacity 200ms ease, filter 200ms ease;
+    transition: font-size 200ms ease;
     color: var(--white);
     & .txtBehance {
       font-size: 0px;

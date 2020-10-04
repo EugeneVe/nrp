@@ -24,7 +24,7 @@ button {
 body {
   @include background;
   background-image: var(--mainblockbg);
-  transition: background-image 200ms ease-in-out;
+  // transition: background-image 200ms ease-in-out;
   background-color: var(--white) !important;
   overflow-x: hidden;
   @media (max-width: 1024px) {
@@ -184,7 +184,7 @@ a:hover {
 // Blur Off
 .light-on:before {
   @include contentInnerBlur;
-  animation: blurOff 500ms ease;
+  // animation: blurOff 500ms ease;
   filter: none;
   transform: none;
 }
@@ -199,7 +199,7 @@ a:hover {
 // Blur On
 .contentInner:before {
   @include contentInnerBlur;
-  animation: blurOn 500ms ease;
+  // animation: blurOn 500ms ease;
 }
 
 @keyframes blurOn {

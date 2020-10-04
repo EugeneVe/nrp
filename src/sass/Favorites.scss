@@ -13,7 +13,7 @@
   cursor: pointer;
   &:hover {
     transform: translateY(-5px);
-    transition: transform 500ms ease;
+    // transition: transform 500ms ease;
   }
 }
 .svgImg {
@@ -24,7 +24,7 @@
   &:hover {
     opacity: 1;
     transform: translateY(-5px);
-    transition: opacity 500ms ease, transform 1000ms ease;
+    // transition: opacity 500ms ease, transform 1000ms ease;
   }
 }
 .favInside {
