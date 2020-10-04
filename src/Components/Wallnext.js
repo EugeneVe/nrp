@@ -1,6 +1,5 @@
 import React from "react";
 import walls from "../json/walls.json";
-import "../sass/topNavBar.scss";
 
 // Set the wallpaper from array
 const wallUrl = "--mainblockbg";

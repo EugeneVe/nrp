@@ -1,5 +1,4 @@
 import React from "react";
-import "../sass/contact.scss";
 import Blurswitch from "../Components/Blurswitch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
@@ -81,7 +80,7 @@ const Contact = () => (
             </div>
             <div className="icon">
               <FontAwesomeIcon icon={faPaperclip} className="userAttach" />
-              <input id="searchTxt" className="formInner" type="file" accept="image/*" title="Please choose image" onChange={loadImage} />
+              <input id="searchTxt" className="formInner" name="upload" type="file" accept="image/*" title="Please choose image" onChange={loadImage} />
             </div>
             <input type="hidden" name="_next" />
             <input type="text" name="_gotcha" className="spam" />

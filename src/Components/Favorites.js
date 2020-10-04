@@ -1,5 +1,4 @@
 import React from "react";
-import "../sass/Favorites.scss";
 
 const Button = (props) => {
   return (

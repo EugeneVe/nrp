@@ -1,5 +1,4 @@
 import React from "react";
-import "../sass/topNavBar.scss";
 import * as ReactBootStrap from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Links from "./Links";
