@@ -1,5 +1,4 @@
 import React from "react";
-import "../sass/home.scss";
 import Moment from "react-moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +16,7 @@ const greetingMessage =
     : currentHour > 17 || currentHour < 4
     ? "Good evening"
     : "Welcome";
-// Citats
+// Quotes
 const randomQuote = Math.floor(Math.random() * quotesArrey.length);
 const quotes = quotesArrey[randomQuote];
 

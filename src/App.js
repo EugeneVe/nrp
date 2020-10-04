@@ -1,5 +1,12 @@
 import React from "react";
 import "./sass/style.scss";
+import "./sass/home.scss";
+import "./sass/product.scss";
+import "./sass/contact.scss";
+import "./sass/topNavBar.scss";
+import "./sass/bottomFooter.scss";
+import "./sass/favorites.scss";
+import "./sass/mixinsvars.scss";
 import NavBar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";

@@ -1,5 +1,4 @@
 import React from "react";
-import "../sass/bottomFooter.scss";
 import Links from "./Links";
 import * as ReactBootStrap from "react-bootstrap";
 import { Link } from "react-router-dom";

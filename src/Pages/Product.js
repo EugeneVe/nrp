@@ -1,5 +1,4 @@
 import React from "react";
-import "../sass/product.scss";
 import Blurswitch from "../Components/Blurswitch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBehanceSquare } from "@fortawesome/free-brands-svg-icons";
