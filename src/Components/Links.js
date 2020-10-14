@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Wallnext from "./Wallnext";
+import Wallnextxxx from "../Components/Wallnextxxx"
 
 const Links = () => (
   <>
+  <Wallnextxxx/>
     <Link to="/" className="navUnderlineNone navList">
       <p>Home</p>
     </Link>
@@ -19,6 +21,7 @@ const Links = () => (
     <Link to="#" className="navUnderlineNone navList">
       <Wallnext />
     </Link>
+    
   </>
 );
 

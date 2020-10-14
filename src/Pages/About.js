@@ -21,6 +21,7 @@ const About = () => {
           <div className="flexColumn">
             <ul>
               <li>HTML5 - Deep Knowledge</li>
+              <li>BEM — Block Element Modifier</li>
               <li>CSS ( CSS3, SASS, LESS ) - Deep Knowledge</li>
               <li>
                 JavaScript (ES6) - Base:

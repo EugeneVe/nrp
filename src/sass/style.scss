@@ -25,7 +25,7 @@ body {
   @include background;
   background-image: var(--mainblockbg);
   // transition: background-image 200ms ease-in-out;
-  background-color: var(--white) !important;
+  background-color: var(--darkgray) !important;
   overflow-x: hidden;
   @media (max-width: 1024px) {
     background-size: cover !important;
