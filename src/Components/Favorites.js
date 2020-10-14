@@ -1,5 +1,4 @@
 import React from "react";
-
 const Button = (props) => {
   return (
     <p className="favBtn" onClick={props.toggle}>
@@ -24,7 +23,7 @@ class Favorites extends React.Component {
   render() {
     return (
       <div className="favContainer">
-        <Button name={this.state.isOpen ? "Hide" : "Favorites ☆"} toggle={this.toggle} />
+        <Button name={this.state.isOpen ? "Hide" : "Favorites"} toggle={this.toggle} />
         {this.state.isOpen && (
           <div className="favInside">
             <a href="//weather.com/uk-UA/weather/today/l/UPXX0014:1:UP" title="Weather" target="blank" className="svgImg">

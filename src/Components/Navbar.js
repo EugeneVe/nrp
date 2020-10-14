@@ -2,6 +2,7 @@ import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Links from "./Links";
+// import Wallnextxxx from "./Wallnextxxx";
 
 const NavBar = () => (
   <ReactBootStrap.Navbar fixed="top" collapseOnSelect expand="sm" variant="dark" className="topNavBar">
@@ -10,6 +11,7 @@ const NavBar = () => (
         <span>EV</span>
       </div>
     </Link>
+    {/* <Wallnextxxx /> */}
     <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
       <ReactBootStrap.Nav className="mr-auto"></ReactBootStrap.Nav>

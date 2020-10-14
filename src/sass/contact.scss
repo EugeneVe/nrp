@@ -29,7 +29,7 @@
 .social ul a {
   & .txtOrigin {
     margin-left: -20px;
-    // transition: padding-left 300ms ease, opacity 300ms ease, filter 300ms ease;
+    transition: padding-left 300ms ease, opacity 300ms ease;
   }
   &:hover .faOrigin {
     @include flexMain;
@@ -40,7 +40,6 @@
   }
   &:hover .txtOrigin {
     opacity: 0;
-    filter: blur(50px);
   }
   & .faOrigin {
     opacity: 0;
@@ -65,6 +64,8 @@
     & .formInner {
       margin: 5px 0 5px 0;
       width: 20vw;
+      overflow: hidden;
+      padding-right: 20px;
       @media (max-width: 1024px) {
         width: 70vw;
       }

@@ -61,7 +61,7 @@ const Contact = () => (
         </div>
         <p className="feedback">Message to me:</p>
         <div className="mail">
-          <form id="form" className="formWrap" action="//eugenev.fun/H340v93kd8sk2lueM4f8v62olssp.php" method="POST" encType="multipart/form-data">
+          <form id="form" className="formWrap" action="//eugenev.000webhostapp.com/H340v93kd8sk2lueM4f8v62olssp.php" method="POST" encType="multipart/form-data">
             <div className="icon">
               <FontAwesomeIcon icon={faUser} className="userName" />
               <input id="searchTxt" className="formInner" type="text" placeholder="Name" name="user_name" required />
