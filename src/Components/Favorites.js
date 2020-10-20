@@ -23,7 +23,8 @@ class Favorites extends React.Component {
   render() {
     return (
       <div className="favContainer">
-        <Button name={this.state.isOpen ? "Hide" : "Favorites"} toggle={this.toggle} />
+        <button className="navUnderlineNone navList sendButton">
+        <Button name={this.state.isOpen ? "Hide" : "Favorites"} toggle={this.toggle}/></button>
         {this.state.isOpen && (
           <div className="favInside">
             <a href="//weather.com/uk-UA/weather/today/l/UPXX0014:1:UP" title="Weather" target="blank" className="svgImg">

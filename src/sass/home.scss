@@ -1,12 +1,24 @@
 @import "../sass/mixinsvars.scss";
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+
+.empty .name {
+  font-family: "Allura", cursive;
+  font-size: 3vw;
+  @media (orientation: portrait) {
+    font-size: 8vw;
+  }
+}
 
 // Google Search
 .searchWrapper {
   @media (max-width: 1024px) and (orientation: portrait) {
     width: 95%;
   }
-  margin: 0 auto;
-  width: 80%;
+  @media (max-width: 812px) and (orientation: landscape) {
+    width: 95%;
+  }
+  margin: 2% 0 0 0;
+  width: 50%;
 }
 .formWrap {
   width: 100%;
@@ -64,21 +76,6 @@
     position: absolute;
     margin: 13px 15px;
     opacity: 0.5;
-  }
-}
-
-.dateTimeContent {
-  margin: 20px 0;
-  @media (max-width: 1024px) and (orientation: landscape) {
-    margin: 0;
-  }
-}
-
-.dateTimeContent span {
-  font-weight: 100 !important;
-  font-size: 120%;
-  * {
-    font-weight: 100 !important;
   }
 }
 
