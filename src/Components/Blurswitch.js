@@ -15,7 +15,7 @@ class Blurswitch extends React.Component {
         >
           <span>{this.state.active ? "✕" : "✓"}</span>
         </div>
-        <div className={this.state.active ? " light-on " : " contentInner "} />
+        <div className={this.state.active ? "light-on" : "contentInner"} />
       </>
     );
   }

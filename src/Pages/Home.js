@@ -22,8 +22,11 @@ const quotes = quotesArrey[randomQuote];
 
 const Home = () => (
   <div className="MainContent">
-    <div className="home">
-      <div className="containerWarp contentInner">
+    <div className="containerWarp contentInner contentInnerPages">
+      <div className="anyPage">
+        <div className="empty">
+        <h3 className="name">Eugene Veprytskyi</h3>
+        <h3 className="name">home page</h3>
         <div className="searchWrapper">
           <div className="formWrap">
             <div className="searchIcon">
@@ -58,9 +61,10 @@ const Home = () => (
         <div className="favorites">
           <Favorites />
         </div>
+        </div>
+        </div>
         <Blurswitch />
       </div>
-    </div>
   </div>
 );
 
