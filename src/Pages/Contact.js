@@ -5,7 +5,7 @@ import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faPhone, faEnvelope, faComment, faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faFacebookSquare, faTwitterSquare, faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
 
-const loadImage = (event) => {
+const loadImage = event => {
   const wallUrl = "--mainblockbg";
   document.documentElement.style.setProperty(wallUrl, "url(" + URL.createObjectURL(event.target.files[0]) + ")");
   const pic = document.getElementById("inpPreview");
