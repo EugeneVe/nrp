@@ -23,7 +23,7 @@ class Favorites extends React.Component {
   render() {
     return (
       <div className="favContainer">
-        <button className="navUnderlineNone navList sendButton">
+        <button className="favMargin navUnderlineNone navList sendButton">
           <Button name={this.state.isOpen ? "Hide" : "Favorites"} toggle={this.toggle} />
         </button>
         {this.state.isOpen && (

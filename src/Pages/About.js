@@ -1,12 +1,11 @@
 import React from "react";
-import Blurswitch from "../Components/Blurswitch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
     <div className="MainContent">
-      <div className="containerWarp contentInner contentInnerPages">
+      <div className="containerWarp contentInnerPages">
         <div className="anyPage">
           <h2>About me</h2>
           <p className="faFeatherAlt">
@@ -64,7 +63,6 @@ const About = () => {
             <li>Jurisprudence</li>
           </ul>
         </div>
-        <Blurswitch />
       </div>
     </div>
   );

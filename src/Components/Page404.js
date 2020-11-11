@@ -7,7 +7,7 @@ import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
 const Page404 = () => (
   <div className="MainContent">
     <div className="home">
-      <div className="containerWarp contentInner textPcentered">
+      <div className="containerWarp textPcentered">
         <h2>404 OOPS!</h2>
         <p className="faFeatherAlt">
           <FontAwesomeIcon icon={faFeatherAlt} />

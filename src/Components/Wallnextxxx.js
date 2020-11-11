@@ -21,9 +21,10 @@ const Password = () => {
   if (passwordRequest === hashcode) {
     show2();
     show1();
+    changeWallxxx();
   }
 };
-
+console.log(hashcode);
 const Wallnextxxx = () => (
   <>
     {/* <button type="radio" name="tab" value="igotnone" onClick={show1}>None</button> */}

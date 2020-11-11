@@ -1,5 +1,4 @@
 import React from "react";
-import Blurswitch from "../Components/Blurswitch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBehanceSquare } from "@fortawesome/free-brands-svg-icons";
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
@@ -7,7 +6,7 @@ import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
 const Product = () => (
   <div className="MainContent">
     {/* <div className="product"> */}
-    <div className="containerWarp contentInner contentInnerPages">
+    <div className="containerWarp contentInnerPages">
       <div className="anyPage">
         <div className="empty">
           <h2>My products</h2>
@@ -25,7 +24,6 @@ const Product = () => (
           </div>
         </div>
       </div>
-      <Blurswitch />
     </div>
   </div>
 );

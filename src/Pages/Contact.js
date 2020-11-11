@@ -1,5 +1,4 @@
 import React from "react";
-import Blurswitch from "../Components/Blurswitch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faPhone, faEnvelope, faComment, faPaperclip } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +16,7 @@ const loadImage = event => {
 
 const Contact = () => (
   <div className="MainContent">
-    <div className="containerWarp contentInner contentInnerPages">
+    <div className="containerWarp contentInnerPages">
       <div className="anyPage">
         <h2>Contacts</h2>
         <p className="faFeatherAlt">
@@ -61,7 +60,7 @@ const Contact = () => (
         </div>
         <p className="feedback">Message to me:</p>
         <div className="mail">
-          <form id="form" className="formWrap" action="//eugenev.000webhostapp.com/H340v93kd8sk2lueM4f8v62olssp.php" method="POST" encType="multipart/form-data">
+          <form id="form" className="formWrap" action="//advokat-veprytskyi.com/H340v93kd8sk2lueM4f8v62olssp.php" method="POST" encType="multipart/form-data">
             <div className="icon">
               <FontAwesomeIcon icon={faUser} className="userName" />
               <input id="searchTxt" className="formInner" type="text" placeholder="Name" name="user_name" required />
@@ -92,7 +91,6 @@ const Contact = () => (
           </form>
         </div>
       </div>
-      <Blurswitch />
     </div>
   </div>
 );
