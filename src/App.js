@@ -15,6 +15,7 @@ import Contact from "./Pages/Contact";
 import Footer from "./Components/Footer";
 import Page404 from "./Pages/Page404";
 import Email from "./Pages/Email";
+import Blurswitch from "./Components/Blurswitch";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Switch from "react-router-transition-switch";
 import Fader from "react-fader";
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/mailsent" component={Email} />
         <Route component={Page404} />
       </Switch>
+      <Blurswitch />
       <Footer />
     </Router>
   );

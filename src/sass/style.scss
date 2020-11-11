@@ -45,7 +45,7 @@ a:hover {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 a:hover {
@@ -64,11 +64,11 @@ a:hover {
 
 .containerWarp {
   @include containerWarp;
-  @media (max-width: 1024px) and (orientation: portrait) {
-    width: 90%;
-    padding: 10% 5% 10% 5%;
-    height: calc(90% - 54px);
-  }
+  // @media (max-width: 1024px) and (orientation: portrait) {
+  //   width: 90%;
+  //   padding: 10% 5% 10% 5%;
+  //   height: calc(90% - 54px);
+  // }
   & .dateTimeContent {
     @media (max-width: 1024px) and (orientation: landscape) {
       margin: 0;
@@ -96,32 +96,55 @@ a:hover {
   }
 }
 
-.textPcentered {
-  text-align: center;
-  h2 {
-    font-weight: 100;
-  }
-  p {
-    margin: 0;
-  }
-}
-
 .contentInnerPages {
   height: 80%;
   width: 70% !important;
-  @media (max-width: 1024px) and (orientation: landscape) {
+  @media (max-width: 1240px) and (orientation: landscape) {
     width: 90% !important;
-    padding: 5% 5% 8% 5%;
+    padding: 5% 5% 5% 5%;
     height: calc(90% - 54px);
   }
-  @media (max-width: 1024px) and (orientation: portrait) {
+  @media (max-width: 1240px) and (orientation: portrait) {
     width: 90% !important;
-    padding: 5% 5% 15% 5%;
+    padding: 5% 5% 5% 5%;
     height: calc(90% - 54px);
   }
 }
 
+.isBlur {
+  position: absolute;
+  height: 80%;
+  width: 70%;
+  backdrop-filter: var(--blur);
+  background-color: var(--darkgray);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  z-index: -1;
+  top: 53%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  @media (max-width: 1240px) and (orientation: portrait) {
+    margin: 40px 0 0 0;
+    bottom: 0;
+    width: 98%;
+    padding: 5%;
+    height: 85vh;
+  }
+  @media (max-width: 1240px) and (orientation: landscape) {
+    margin: 50px 0 0 0;
+    width: 90%;
+    padding: 5%;
+    height: 85%;
+  }
+}
+.unBlur {
+  backdrop-filter: blur(0px);
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .anyPage {
+  display: grid;
   height: 100%;
   width: 100%;
   overflow-y: scroll;
@@ -143,8 +166,6 @@ a:hover {
   }
   .empty {
     justify-content: center;
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,6 +176,7 @@ a:hover {
   }
 }
 
+// About
 .flexColumn {
   display: flex;
   ul {
@@ -163,8 +185,21 @@ a:hover {
 }
 
 // TOOGLE switch on/off blur
-.round {
+.blurswitch__button {
   position: absolute;
+  bottom: 8%;
+  right: 15.6%;
+  @media (max-width: 1240px) and (orientation: landscape) {
+    bottom: -7%;
+    right: 6%;
+  }
+  @media (max-width: 1240px) and (orientation: portrait) {
+    bottom: -25px;
+    right: 1vh;
+  }
+}
+
+.round {
   width: 30px;
   height: 30px;
   display: flex;
@@ -174,52 +209,24 @@ a:hover {
   z-index: 1;
   bottom: 0;
   right: 0;
-  margin: 20px;
+  margin: 5px;
   border-radius: 50%;
 }
 
 .switch-off {
-  transition: box-shadow 500ms ease;
-  backface-visibility: hidden;
-  perspective: 1000;
+  transition: box-shadow 500ms ease, background-color 500ms ease;
+  color: var(--white);
   &:hover {
     @include nemorphBox;
-    color: var(--white);
+    // background-color: var(--gray);
   }
 }
 
 .switch-on {
-  transition: box-shadow 500ms ease-in-out;
+  transition: box-shadow 500ms ease, background-color 500ms ease;
+  color: var(--white);
   &:hover {
     @include nemorphBox;
-    color: var(--white);
-  }
-}
-
-// Blur Off
-.light-on:before {
-  @include contentInnerBlur;
-  // animation: blurOff 500ms ease;
-  filter: none;
-  transform: none;
-}
-
-@keyframes blurOff {
-  from {
-    filter: var(--blur);
-    transform: var(--scale);
-  }
-}
-
-// Blur On
-.contentInner:before {
-  @include contentInnerBlur;
-  // animation: blurOn 500ms ease;
-}
-
-@keyframes blurOn {
-  from {
-    -webkit-filter: blur(0);
-    transform: scale(1);
+    // background-color: var(--gray);
   }
 }

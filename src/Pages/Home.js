@@ -2,7 +2,6 @@ import React from "react";
 import Moment from "react-moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import Blurswitch from "../Components/Blurswitch";
 import Favorites from "../Components/Favorites";
 import quotesArrey from "../json/quotes.json";
 
@@ -22,7 +21,7 @@ const quotes = quotesArrey[randomQuote];
 
 const Home = () => (
   <div className="MainContent">
-    <div className="containerWarp contentInner contentInnerPages">
+    <div className="containerWarp contentInnerPages">
       <div className="anyPage">
         <div className="empty">
           <h3 className="name">Eugene Veprytskyi</h3>
@@ -63,7 +62,6 @@ const Home = () => (
           </div>
         </div>
       </div>
-      <Blurswitch />
     </div>
   </div>
 );

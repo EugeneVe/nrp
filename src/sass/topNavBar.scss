@@ -6,21 +6,15 @@
 }
 
 .topNavBar {
-  background-color: var(--bgcolorNavFt);
+  backdrop-filter: var(--blur);
+  background-color: var(--darkgray);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   padding: 10px 1px 10px 11px !important;
 }
-.topNavBar:before {
-  @include contentInnerBlurTopBar;
-  top: 0px;
-}
 
 @media (max-width: 575px) {
-  .navbar {
-    background-color: var(--gray);
-    & .navbar-toggler {
-      border: none;
-    }
+  .navbar-toggler {
+    border: none;
   }
 }
 
@@ -38,8 +32,10 @@
 bar-toggler {
   border: 0px solid transparent;
 }
+
 .navbar-toggler {
   outline: none !important;
+  border: none !important;
 }
 .navbar-toggler-icon {
   transition: transform 500ms ease;
@@ -52,17 +48,17 @@ bar-toggler {
   transition: box-shadow 500ms ease;
   padding: 3px 10px 3px 10px;
   border-radius: 50px;
+  p {
+    margin: 0;
+    color: var(--white);
+  }
   @media (orientation: portrait) {
     padding: 3px 10px 3px 10px;
     margin: 10px;
   }
-  & p {
-    margin: 0;
-    color: var(--white);
-  }
-  &:hover {
-    @include neomorphBoxHover;
-  }
+}
+.navList:hover {
+  @include neomorphBoxHover;
 }
 
 .myBrand {
