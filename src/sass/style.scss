@@ -1,5 +1,4 @@
 @import "../sass/mixinsvars.scss";
-
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 // Main Style
@@ -24,7 +23,6 @@ button {
 body {
   @include background;
   background-image: var(--mainblockbg);
-  // transition: background-image 200ms ease-in-out;
   background-color: var(--darkgray) !important;
   overflow-x: hidden;
   @media (max-width: 1024px) {
@@ -64,11 +62,6 @@ a:hover {
 
 .containerWarp {
   @include containerWarp;
-  // @media (max-width: 1024px) and (orientation: portrait) {
-  //   width: 90%;
-  //   padding: 10% 5% 10% 5%;
-  //   height: calc(90% - 54px);
-  // }
   & .dateTimeContent {
     @media (max-width: 1024px) and (orientation: landscape) {
       margin: 0;
@@ -218,7 +211,6 @@ a:hover {
   color: var(--white);
   &:hover {
     @include nemorphBox;
-    // background-color: var(--gray);
   }
 }
 
@@ -227,6 +219,5 @@ a:hover {
   color: var(--white);
   &:hover {
     @include nemorphBox;
-    // background-color: var(--gray);
   }
 }
