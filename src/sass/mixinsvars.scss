@@ -7,8 +7,6 @@
   --white: rgba(224, 224, 224, 1);
   --gray: rgba(52, 58, 64, 1);
   --darkgray: rgb(32, 36, 39, 0.5);
-  // --hoverColor: rgba(255, 255, 255, 0.3);
-  // --linerGradient: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.3));
 }
 
 // Mixin
@@ -37,14 +35,8 @@
   position: absolute;
   width: 40%;
   padding: 2% 2% 4% 2%;
-  // box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  // border-radius: 30px;
   overflow: hidden;
-  // @media (max-width: 1024px) and (orientation: landscape) {
-  //   width: 90%;
-  //   padding: 5%;
-  //   height: calc(90% - 54px);
-  // }
+
   & h2 {
     font-size: 5em;
     @media (max-width: 1024px) {
