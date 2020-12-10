@@ -92,12 +92,12 @@ a:hover {
 .contentInnerPages {
   height: 80%;
   width: 70% !important;
-  @media (max-width: 1240px) and (orientation: landscape) {
+  @media (max-width: 1024px) and (orientation: landscape) {
     width: 90% !important;
     padding: 5% 5% 5% 5%;
     height: calc(90% - 54px);
   }
-  @media (max-width: 1240px) and (orientation: portrait) {
+  @media (max-width: 1024px) and (orientation: portrait) {
     width: 90% !important;
     padding: 5% 5% 5% 5%;
     height: calc(90% - 54px);
@@ -106,28 +106,22 @@ a:hover {
 
 .isBlur {
   position: absolute;
-  height: 80%;
+  height: 80vh;
   width: 70%;
   backdrop-filter: var(--blur);
   background-color: var(--darkgray);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   z-index: -1;
-  top: 53%;
+  top: 15vh;
   right: 50%;
-  transform: translate(50%, -50%);
-  @media (max-width: 1240px) and (orientation: portrait) {
-    margin: 40px 0 0 0;
-    bottom: 0;
-    width: 98%;
-    padding: 5%;
-    height: 85vh;
+  transform: translateX(50%);
+  @media (max-width: 1024px) {
+    width: 98vw;
   }
-  @media (max-width: 1240px) and (orientation: landscape) {
-    margin: 50px 0 0 0;
-    width: 90%;
-    padding: 5%;
-    height: 85%;
+  @media (orientation: portrait) {
+    height: 83vh;
+    top: 12vh;
   }
 }
 .unBlur {
@@ -180,15 +174,11 @@ a:hover {
 // TOOGLE switch on/off blur
 .blurswitch__button {
   position: absolute;
-  bottom: 8%;
-  right: 15.6%;
-  @media (max-width: 1240px) and (orientation: landscape) {
-    bottom: -7%;
-    right: 6%;
-  }
-  @media (max-width: 1240px) and (orientation: portrait) {
-    bottom: -25px;
-    right: 1vh;
+  bottom: 0%;
+  right: 0%;
+  @media (max-width: 1024px) {
+    // bottom: 4%;
+    right: 2%;
   }
 }
 
