@@ -116,6 +116,7 @@ a:hover {
   top: 15vh;
   right: 50%;
   transform: translateX(50%);
+  border: solid rgba(255, 255, 255, 0.1) 1px;
   @media (max-width: 1024px) {
     width: 98vw;
   }
@@ -127,6 +128,7 @@ a:hover {
 .unBlur {
   backdrop-filter: blur(0px);
   background-color: transparent;
+  border: none;
   box-shadow: none;
 }
 
@@ -136,12 +138,7 @@ a:hover {
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  @include nonSelect;
   .faFeatherAlt {
     text-align: center;
     padding: 10px 0 10px 0;
@@ -177,7 +174,6 @@ a:hover {
   bottom: 0%;
   right: 0%;
   @media (max-width: 1024px) {
-    // bottom: 4%;
     right: 2%;
   }
 }
@@ -194,20 +190,19 @@ a:hover {
   right: 0;
   margin: 5px;
   border-radius: 50%;
-}
-
-.switch-off {
-  transition: box-shadow 500ms ease, background-color 500ms ease;
   color: var(--white);
+  @include nonSelect;
   &:hover {
     @include nemorphBox;
+    backdrop-filter: var(--blur);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: box-shadow 500ms ease, background-color 500ms ease;
   }
 }
 
-.switch-on {
-  transition: box-shadow 500ms ease, background-color 500ms ease;
-  color: var(--white);
-  &:hover {
-    @include nemorphBox;
-  }
+.react-cookie-banner {
+  position: fixed !important;
+  bottom: 0 !important;
+  backdrop-filter: var(--blur) !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
