@@ -26,7 +26,6 @@ const Password = () => {
 };
 const Wallnextxxx = () => (
   <>
-    {/* <button type="radio" name="tab" value="igotnone" onClick={show1}>None</button> */}
     <span id="navbar__content" onClick={changeWallxxx}></span>
     <button id="secret" className="secret" onClick={Password}></button>
   </>

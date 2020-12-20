@@ -19,6 +19,7 @@ import Blurswitch from "./Components/Blurswitch";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Switch from "react-router-transition-switch";
 import Fader from "react-fader";
+import CookieBanner from "react-cookie-banner";
 
 const App = () => {
   return (
@@ -34,6 +35,14 @@ const App = () => {
       </Switch>
       <Blurswitch />
       <Footer />
+      <CookieBanner
+        className="react-cookie-banner"
+        message="Yes, my website use cookies!"
+        onAccept={() => {
+          alert("Thanks for understanding");
+        }}
+        cookie="user-has-accepted-cookies"
+      />
     </Router>
   );
 };
