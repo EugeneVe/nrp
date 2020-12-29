@@ -5,17 +5,15 @@
 div [alt="www.000webhost.com"] {
   display: none;
 }
-button {
-  border: none;
-  background: none;
-  &:focus {
-    outline: none !important;
-  }
+html {
+  box-sizing: border-box;
 }
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
   font-family: "Lato", sans-serif;
   font-weight: 300;
 }
@@ -30,6 +28,14 @@ body {
   }
   @media (orientation: portrait) {
     background-size: cover !important;
+  }
+}
+
+button {
+  border: none;
+  background: none;
+  &:focus {
+    outline: none !important;
   }
 }
 
@@ -93,12 +99,12 @@ a:hover {
   height: 80%;
   width: 70% !important;
   @media (max-width: 1024px) and (orientation: landscape) {
-    width: 90% !important;
+    width: 98% !important;
     padding: 5% 5% 5% 5%;
     height: calc(90% - 54px);
   }
   @media (max-width: 1024px) and (orientation: portrait) {
-    width: 90% !important;
+    width: 98% !important;
     padding: 5% 5% 5% 5%;
     height: calc(90% - 54px);
   }
@@ -113,25 +119,42 @@ a:hover {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   z-index: -1;
-  top: 15vh;
   right: 50%;
   transform: translateX(50%);
   border: solid rgba(255, 255, 255, 0.1) 1px;
+  animation: down-side 1000ms ease-out forwards;
   @media (max-width: 1024px) {
     width: 98vw;
   }
-  @media (orientation: portrait) {
-    height: 83vh;
-    top: 12vh;
-  }
 }
 .unBlur {
-  backdrop-filter: blur(0px);
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+  animation: up-side 1000ms ease-in forwards;
+  @media (max-width: 1024px) {
+    width: 98vw;
+  }
 }
-
+@keyframes up-side {
+  0% {
+    top: 14vh;
+  }
+  30% {
+    top: 19vh;
+  }
+  100% {
+    top: -5999px;
+  }
+}
+@keyframes down-side {
+  0% {
+    top: -5999px;
+  }
+  80% {
+    top: 19vh;
+  }
+  100% {
+    top: 14vh;
+  }
+}
 .anyPage {
   display: grid;
   height: 100%;
@@ -154,9 +177,6 @@ a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    @media (max-width: 1024px) and (orientation: landscape) {
-      justify-content: end;
-    }
   }
 }
 
