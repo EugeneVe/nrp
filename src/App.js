@@ -20,10 +20,12 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Switch from "react-router-transition-switch";
 import Fader from "react-fader";
 import CookieBanner from "react-cookie-banner";
+import { Lines } from "react-preloaders";
 
 const App = () => {
   return (
     <Router>
+      <Lines background="radial-gradient(circle, rgba(15,15,15,1) 0%, rgba(32,32,32,1) 100%)" />
       <NavBar />
       <Switch component={Fader}>
         <Route path="/" exact component={Home} />
