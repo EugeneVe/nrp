@@ -1,15 +1,15 @@
 import React from "react";
-import Links from "./Links";
 import * as ReactBootStrap from "react-bootstrap";
 import Moment from "react-moment";
 
 const Footer = () => (
   <div className="footerwrapper">
     <ReactBootStrap.Navbar expand="sm" className="bottomNavBar">
-      <div className="footer_links">
-        <Links />
-      </div>
       <div className="copyright">
+        <p className="mailToFooter">
+          <span>Email:</span>
+          <a href="mailto:eugene.veprytskyi@gmail.com"> eugene.veprytskyi@gmail.com</a>
+        </p>
         <span>© EugeneV 2020 - </span>
         <Moment format="YYYY" />
       </div>

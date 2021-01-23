@@ -1,5 +1,5 @@
 import React from "react";
-const Button = props => {
+const Button = (props) => {
   return (
     <p className="favBtn" onClick={props.toggle}>
       {props.name}
@@ -15,7 +15,7 @@ class Favorites extends React.Component {
   }
 
   toggle() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
     }));
   }
@@ -23,7 +23,7 @@ class Favorites extends React.Component {
   render() {
     return (
       <div className="favContainer">
-        <button className="favMargin navUnderlineNone navList sendButton">
+        <button className="favMargin navUnderlineNone sendButton">
           <Button name={this.state.isOpen ? "Hide" : "Favorites"} toggle={this.toggle} />
         </button>
         {this.state.isOpen && (

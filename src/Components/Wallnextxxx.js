@@ -1,7 +1,7 @@
 import React from "react";
 import wallsxxx from "../json/wallsxxx.json";
 import hashcode from "../json/hashcode.json";
-
+import { Burger } from "../Components/Navbar";
 // Set the wallpaper from array
 let counter = [];
 const wallUrl = "--mainblockbg";
@@ -26,7 +26,13 @@ const Password = () => {
 };
 const Wallnextxxx = () => (
   <>
-    <span id="navbar__content" onClick={changeWallxxx}></span>
+    <span
+      id="navbar__content"
+      onClick={() => {
+        changeWallxxx();
+        Burger();
+      }}
+    ></span>
     <button id="secret" className="secret" onClick={Password}></button>
   </>
 );

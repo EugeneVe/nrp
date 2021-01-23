@@ -10,6 +10,7 @@
   border-radius: 15px;
   margin: 3px;
   backdrop-filter: blur(15px);
+  border: solid rgba(255, 255, 255, 0.1) 1px;
   z-index: 2;
 }
 nav {
@@ -52,6 +53,8 @@ nav {
   @media (orientation: portrait) {
     padding: 3px 10px 3px 10px;
     margin: 3vh !important;
+    transform: translateX(100vw);
+    transition: transform 200ms ease-in;
   }
 }
 .navList:hover {
@@ -95,7 +98,7 @@ nav {
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 0 25px 0 25px;
+  margin: 0 15px 0 15px;
 }
 
 .burger_wrap {

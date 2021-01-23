@@ -126,6 +126,9 @@ a:hover {
   @media (max-width: 1024px) {
     width: 98vw;
   }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    margin: 19px 0 0 0;
+  }
 }
 .unBlur {
   animation: up-side 1000ms ease-in forwards;

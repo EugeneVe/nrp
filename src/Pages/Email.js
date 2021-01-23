@@ -14,7 +14,7 @@ const Email = () => (
               <FontAwesomeIcon icon={faFeatherAlt} />
             </p>
             <p>Go back to main page</p>
-            <Link to="/" className="navUnderlineNone navList sendButton">
+            <Link to="/" className="navUnderlineNone sendButton">
               <p>Home</p>
             </Link>
           </div>
