@@ -83,7 +83,7 @@ const Contact = () => (
             </div>
             <input type="hidden" name="_next" />
             <input type="text" name="_gotcha" className="spam" />
-            <button className="navUnderlineNone navList sendButton">SEND</button>
+            <button className="navUnderlineNone sendButton">SEND</button>
             <div className="inpPreviewContainer">
               <span className="imgError">Attached image</span>
               <img id="inpPreview" alt=" " />
