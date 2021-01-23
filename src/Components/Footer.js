@@ -1,23 +1,18 @@
 import React from "react";
 import Links from "./Links";
 import * as ReactBootStrap from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Moment from "react-moment";
 
 const Footer = () => (
   <div className="footerwrapper">
-    <ReactBootStrap.Navbar fixed="top" expand="sm" variant="dark" className="bottomNavBar">
-      <Link to="/">
-        <div className="myBrand">
-          <span>EV</span>
-        </div>
-      </Link>
-      <ReactBootStrap.Nav className="navbar-navCustom">
+    <ReactBootStrap.Navbar expand="sm" className="bottomNavBar">
+      <div className="footer_links">
         <Links />
-      </ReactBootStrap.Nav>
-      <span className="copyright">
-        © EugeneV 2020 - <Moment format="YYYY" />
-      </span>
+      </div>
+      <div className="copyright">
+        <span>© EugeneV 2020 - </span>
+        <Moment format="YYYY" />
+      </div>
     </ReactBootStrap.Navbar>
   </div>
 );
