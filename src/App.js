@@ -7,6 +7,7 @@ import "./sass/topNavBar.scss";
 import "./sass/bottomFooter.scss";
 import "./sass/favorites.scss";
 import "./sass/mixinsvars.scss";
+import "./sass/about.scss";
 import { NavBar } from "./Components/Navbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";

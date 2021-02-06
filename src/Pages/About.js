@@ -42,7 +42,16 @@ const About = () => {
               <li>Experience with Git</li>
             </ul>
           </div>
+          <div className="courses_done">
+            <img className="courses_done__image" src="//eugenev.fun/assets/UC-33756c4b-b5b1-49ce-b0e6-4902d5ad32ae.jpg" alt="" />
+            <p>
+              This certificate above verifies that Eugene Veprytskyi successfully completed the course The Complete Front-End Web Development Course! on 02/06/2021 as taught by
+              Joseph Delgadillo, Nick Germaine on Udemy. The certificate indicates the entire course was completed as validated by the student. The course duration represents the
+              total video hours of the course at time of most recent completion.
+            </p>
+          </div>
           <h3>Experience</h3>
+
           <ul>
             <p>NOVEMBER 2015 – PRESENT</p>
             <li>Web Designer, Front End Developer / Freelance</li>
