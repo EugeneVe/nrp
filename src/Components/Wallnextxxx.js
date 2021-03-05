@@ -3,9 +3,9 @@ import wallsxxx from "../json/wallsxxx.json";
 import hashcode from "../json/hashcode.json";
 import { Burger } from "../Components/Navbar";
 // Set the wallpaper from array
-let counter = [];
 const wallUrl = "--mainblockbg";
 const countLines = Object.keys(wallsxxx).length; //count lines in json
+let counter = [];
 const countWallxxx = () => {
   if (counter >= countLines) {
     counter = 0;
