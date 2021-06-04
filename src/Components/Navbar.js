@@ -6,11 +6,12 @@ import Links from "./Links";
 export const Burger = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".navLis_active");
+  const navLinks = document.querySelectorAll(".navLis_animation");
   nav.classList.toggle("nav-active");
   //Animate Links
   navLinks.forEach((link, index) => {
     if (link.style.animation) {
+      link.style.animation = ""; //anuimate each time u open burger
     } else {
       link.style.animation = `navLinkFade 200ms ease forwards ${index / 5 + 0.2}s`;
     }

@@ -4,7 +4,7 @@ import walls from "../json/walls.json";
 // Set the wallpaper from array
 const wallUrl = "--mainblockbg";
 const countLines = Object.keys(walls).length; //count lines in json array
-let counter = true;
+let counter = [1];
 const countWall = () => {
   if (counter >= countLines) {
     counter = 0;
