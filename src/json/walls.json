@@ -1,11 +1,11 @@
 [
-  "url(//source.unsplash.com/1920x1080/?beach)",
-  "url(//source.unsplash.com/1920x1080/?cars,)",
-  "url(//source.unsplash.com/1920x1080/?wood)",
-  "url(//source.unsplash.com/1920x1080/?@xps)",
-  "url(//source.unsplash.com/1920x1080/?colors)",
-  "url(//source.unsplash.com/1920x1080/?city)",
-  "url(//source.unsplash.com/1920x1080/?streets)",
-  "url(//source.unsplash.com/1920x1080/?laptop)",
-  "url(//source.unsplash.com/1920x1080/?programming)"
+  "url(https://source.unsplash.com/1920x1080/?beach)",
+  "url(https://source.unsplash.com/1920x1080/?cars,)",
+  "url(https://source.unsplash.com/1920x1080/?wood)",
+  "url(https://source.unsplash.com/1920x1080/?@xps)",
+  "url(https://source.unsplash.com/1920x1080/?colors)",
+  "url(https://source.unsplash.com/1920x1080/?city)",
+  "url(https://source.unsplash.com/1920x1080/?streets)",
+  "url(https://source.unsplash.com/1920x1080/?laptop)",
+  "url(https://source.unsplash.com/1920x1080/?programming)"
 ]
