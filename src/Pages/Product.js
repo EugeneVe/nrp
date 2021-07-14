@@ -17,7 +17,11 @@ const Product = () => (
             design, art, front end website, <br /> please follow the link below.
           </p>
           <div className="behProd">
-            <a href="//www.behance.net/eugeneve" className="behProdBtn" target="blank">
+            <a
+              href="https://www.behance.net/eugeneve"
+              className="behProdBtn"
+              target="blank"
+            >
               <FontAwesomeIcon icon={faBehanceSquare} />
               <p className="txtBehance">Please visit my page on Behance</p>
             </a>
