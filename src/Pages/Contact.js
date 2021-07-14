@@ -39,7 +39,7 @@ const Contact = () => (
         <div className="social">
           <ul>
             <a
-              href="//www.facebook.com/wwwclick/"
+              href="https://www.facebook.com/eugeneveprytskyi"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -51,7 +51,7 @@ const Contact = () => (
               </li>
             </a>
             <a
-              href="//www.linkedin.com/in/eugeneve/"
+              href="https://www.linkedin.com/in/eugeneve/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -63,7 +63,7 @@ const Contact = () => (
               </li>
             </a>
             <a
-              href="//www.instagram.com/eugene.vep/"
+              href="https://www.instagram.com/eugene.vep/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -74,7 +74,7 @@ const Contact = () => (
                 <p className="txtOrigin">Instagram</p>
               </li>
             </a>
-            <a
+            {/* <a
               href="//twitter.com/EugeneVep"
               target="_blank"
               rel="noopener noreferrer"
@@ -85,7 +85,7 @@ const Contact = () => (
                 </p>
                 <p className="txtOrigin">Twitter</p>
               </li>
-            </a>
+            </a> */}
           </ul>
         </div>
         <p className="feedback">Message to me:</p>
@@ -93,7 +93,7 @@ const Contact = () => (
           <form
             id="form"
             className="formWrap"
-            action="//advokat-veprytskyi.com/H340v93kd8sk2lueM4f8v62olssp.php"
+            action="https://advokat-veprytskyi.com/H340v93kd8sk2lueM4f8v62olssp.php"
             method="POST"
             encType="multipart/form-data"
           >
