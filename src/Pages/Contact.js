@@ -11,17 +11,16 @@ import {
 import {
   faLinkedin,
   faFacebookSquare,
-  faTwitterSquare,
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
 
 const loadImage = (event) => {
-  const wallUrl = "--mainblockbg";
+  let wallUrl = "--mainblockbg";
   document.documentElement.style.setProperty(
     wallUrl,
     "url(" + URL.createObjectURL(event.target.files[0]) + ")"
   );
-  const pic = document.getElementById("inpPreview");
+  let pic = document.getElementById("inpPreview");
   pic.src = URL.createObjectURL(event.target.files[0]);
   pic.onload = () => {
     URL.revokeObjectURL(pic.src); // clearing memory

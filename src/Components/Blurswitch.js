@@ -9,7 +9,13 @@ class Blurswitch extends React.Component {
     return (
       <>
         <div className="blurswitch__button">
-          <div title="Blur On/Off" className={this.state.active ? "round switch-on" : "round switch-off"} onClick={() => this.setState({ active: !this.state.active })}>
+          <div
+            title="Blur On/Off"
+            className={
+              this.state.active ? "round switch-on" : "round switch-off"
+            }
+            onClick={() => this.setState({ active: !this.state.active })}
+          >
             <span>{this.state.active ? "✕" : "✓"}</span>
           </div>
         </div>

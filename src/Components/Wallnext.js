@@ -2,21 +2,33 @@ import React from "react";
 import walls from "../json/walls.json";
 
 // Set the wallpaper from array
-const wallUrl = "--mainblockbg";
-const countLines = Object.keys(walls).length; //count lines in json array
-let counter = [1];
-const countWall = () => {
-  if (counter >= countLines) {
-    counter = 0;
-  }
-  return counter++;
+function wallapperChanging() {
+  let countLines = Object.keys(walls).length; //count lines in json array
+  let counter = [1];
+  return function () {
+    if (counter >= countLines) {
+      counter = 0;
+    }
+    return counter++;
+  };
+}
+let changeThisWall = wallapperChanging();
+
+const getWall = () => walls[changeThisWall()];
+
+const changeWall = () => {
+  let wallUrl = "--mainblockbg";
+  document.documentElement.style.setProperty(wallUrl, getWall());
 };
-const getWall = () => walls[countWall()];
-const changeWall = () => document.documentElement.style.setProperty(wallUrl, getWall());
 
 const Wallnext = () => (
   <>
-    <div className="switchBg" type="button" onClick={changeWall} title="Next background">
+    <div
+      className="switchBg"
+      type="button"
+      onClick={changeWall}
+      title="Next background"
+    >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
         <path
           d="M 25 2 C 12.321124 2 2 12.321124 2 25 C 2 37.678876 12.321124 48 25 48 C 37.678876 

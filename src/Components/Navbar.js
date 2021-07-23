@@ -13,7 +13,9 @@ export const Burger = () => {
     if (link.style.animation) {
       link.style.animation = ""; //anuimate each time u open burger
     } else {
-      link.style.animation = `navLinkFade 200ms ease forwards ${index / 5 + 0.2}s`;
+      link.style.animation = `navLinkFade 200ms ease forwards ${
+        index / 5 + 0.2
+      }s`;
     }
   });
   //Burger Animation
