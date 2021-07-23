@@ -1,4 +1,5 @@
 import React from "react";
+
 const Button = (props) => {
   return (
     <p className="favBtn" onClick={props.toggle}>
@@ -9,7 +10,7 @@ const Button = (props) => {
 
 class Favorites extends React.Component {
   constructor(props) {
-    super(props);
+    super([props]);
     this.state = { isOpen: false };
     this.toggle = this.toggle.bind(this);
   }

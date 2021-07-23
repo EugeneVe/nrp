@@ -18,6 +18,7 @@ const Home = ({ initialName = "" }) => {
 
   // Date & Greeter
   const currentHour = new Date().getHours();
+
   const greetingMessage =
     currentHour >= 4 && currentHour < 12
       ? "Good morning"
