@@ -10,7 +10,7 @@ const Button = (props) => {
 
 class Favorites extends React.Component {
   constructor(props) {
-    super([props]);
+    super(props);
     this.state = { isOpen: false };
     this.toggle = this.toggle.bind(this);
   }
