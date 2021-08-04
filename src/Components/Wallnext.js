@@ -2,17 +2,17 @@ import React from "react";
 import walls from "../json/walls.json";
 
 // Set the wallpaper from array
-function wallapperChanging() {
+function wallapperChanging(wallPosition) {
   let countLines = Object.keys(walls).length; //count lines in json array
-  let counter = [1];
   return function () {
-    if (counter >= countLines) {
-      counter = 0;
+    if (wallPosition >= countLines) {
+      wallPosition = 0;
     }
-    return counter++;
+    return wallPosition++;
   };
 }
-let changeThisWall = wallapperChanging();
+
+let changeThisWall = wallapperChanging(1);
 
 const getWall = () => walls[changeThisWall()];
 
