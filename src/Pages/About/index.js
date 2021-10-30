@@ -1,7 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
-import courses_done from "../assests/images/UC-33756c4b-b5b1-49ce-b0e6-4902d5ad32ae.jpg";
+import courses_done from "assests/images/UC-33756c4b-b5b1-49ce-b0e6-4902d5ad32ae.jpg";
+import "./index.scss";
 
 const About = () => {
   return (
@@ -14,9 +15,8 @@ const About = () => {
           </p>
           <h3>Hello, my name is Eugene Veprytskyi</h3>
           <p>
-            I`m web designer with several years of experience and i am looking
-            for further training, challenges and experience while working
-            towards a career in Web Design and UI-UX Design in an IT Company.
+            I`m web designer with several years of experience and i am looking for further training, challenges and
+            experience while working towards a career in Web Design and UI-UX Design in an IT Company.
           </p>
           <h3>Skills</h3>
           <div className="flexColumn">
@@ -45,19 +45,12 @@ const About = () => {
             </ul>
           </div>
           <div className="courses_done">
-            <img
-              className="courses_done__image"
-              src={courses_done}
-              alt="My ended course"
-            />
+            <img className="courses_done__image" src={courses_done} alt="My ended course" />
             <p>
-              This certificate above verifies that Eugene Veprytskyi
-              successfully completed the course The Complete Front-End Web
-              Development Course! on 02/06/2021 as taught by Joseph Delgadillo,
-              Nick Germaine on Udemy. The certificate indicates the entire
-              course was completed as validated by the student. The course
-              duration represents the total video hours of the course at time of
-              most recent completion.
+              This certificate above verifies that Eugene Veprytskyi successfully completed the course The Complete
+              Front-End Web Development Course! on 02/06/2021 as taught by Joseph Delgadillo, Nick Germaine on Udemy.
+              The certificate indicates the entire course was completed as validated by the student. The course duration
+              represents the total video hours of the course at time of most recent completion.
             </p>
           </div>
           <h3>Experience</h3>
@@ -68,22 +61,18 @@ const About = () => {
             <li>Experience in creating wireframes, mockups, prototypes;</li>
             <li>Creating full-stack projects based on Wordpress, Joomla;</li>
             <li>
-              Markup on HTML5, CSS3, SASS, LESS, JavaScript (ES6), Jquery,
-              bootstrap (UI Bootstrap - AngularUI) AngularJS, <b>React</b>;
+              Markup on HTML5, CSS3, SASS, LESS, JavaScript (ES6), Jquery, bootstrap (UI Bootstrap - AngularUI)
+              AngularJS, <b>React</b>;
             </li>
             <li>Custom icons and UI elements designs.</li>
           </ul>
           <h3>Education</h3>
           <ul>
             <p>2005 - 2011</p>
-            <li>
-              Specialist / Kharkiv National University "Politechnical Institute"
-            </li>
+            <li>Specialist / Kharkiv National University "Politechnical Institute"</li>
             <li>Computer Technologies and Network</li>
             <p>1999 - 2004</p>
-            <li>
-              Specialist / Kharkiv National University of Internal Affairs
-            </li>
+            <li>Specialist / Kharkiv National University of Internal Affairs</li>
             <li>Jurisprudence</li>
           </ul>
         </div>

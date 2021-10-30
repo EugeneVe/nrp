@@ -1,27 +1,19 @@
 import React from "react";
-import "./sass/style.scss";
-import "./sass/home.scss";
-import "./sass/product.scss";
-import "./sass/contact.scss";
-import "./sass/topNavBar.scss";
-import "./sass/bottomFooter.scss";
-import "./sass/favorites.scss";
-import "./sass/mixinsvars.scss";
-import "./sass/about.scss";
-import { NavBar } from "./Components/Navbar";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Product from "./Pages/Product";
-import Contact from "./Pages/Contact";
-import Footer from "./Components/Footer";
-import Page404 from "./Pages/Page404";
-import Email from "./Pages/Email";
-import Blurswitch from "./Components/Blurswitch";
+import NavBar from "Components/Navbar";
+import Home from "Pages/Home";
+import About from "Pages/About";
+import Product from "Pages/Products";
+import Contact from "Pages/Contacts";
+import Footer from "Components/Footer";
+import Page404 from "Pages/Page404";
+import Email from "Pages/Email";
+import Blurswitch from "Components/Blurswitch";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Switch from "react-router-transition-switch";
 import Fader from "react-fader";
 import CookieBanner from "react-cookie-banner";
 import { Lines } from "react-preloaders";
+import "sass/style.scss";
 
 const App = () => {
   return (

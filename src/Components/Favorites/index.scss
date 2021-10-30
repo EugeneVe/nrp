@@ -1,4 +1,4 @@
-@import "../sass/mixinsvars.scss";
+@import "sass/mixinsvars.scss";
 
 .favorites {
   @include flexMain;
@@ -42,4 +42,8 @@
   to {
     opacity: 1;
   }
+}
+
+.favInside-hidden {
+  display: none;
 }
