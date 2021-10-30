@@ -36,7 +36,7 @@ nav {
   overflow: hidden;
 }
 
-.navList p {
+.navList span {
   text-transform: uppercase;
 }
 
@@ -46,7 +46,7 @@ nav {
   padding: 3px 10px 3px 10px;
   border-radius: 50px;
   border: solid rgba(255, 255, 255, 0) 1px;
-  p {
+  span {
     margin: 0;
     color: var(--white);
   }
@@ -92,6 +92,7 @@ nav {
 }
 
 .nav-links a {
+  transition: all 500ms;
   color: var(--white);
   text-decoration: none;
   letter-spacing: 3px;

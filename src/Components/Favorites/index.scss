@@ -16,9 +16,13 @@
   fill: var(--white);
   padding: 10px 10px 0 10px;
   transition: transform 500ms ease;
+  cursor: pointer;
   &:hover {
     opacity: 1;
     transform: scale(1.1);
+  }
+  svg {
+    fill: #fff !important;
   }
 }
 .favInside {
