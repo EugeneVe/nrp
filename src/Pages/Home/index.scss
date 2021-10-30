@@ -1,4 +1,4 @@
-@import "../sass/mixinsvars.scss";
+@import "sass/mixinsvars.scss";
 @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 
 .enterYourName {
@@ -103,9 +103,10 @@ input::-webkit-search-cancel-button {
     border-radius: 50%;
     border: none;
     transition: box-shadow 500ms ease;
-    svg {
+    img {
       margin: 5px 0 5px 3px;
-      fill: rgba(255, 255, 255, 0.5);
+      width: 15px;
+      height: 15px;
     }
     &:focus {
       outline: none;

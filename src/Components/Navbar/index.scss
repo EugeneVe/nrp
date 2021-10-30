@@ -1,4 +1,4 @@
-@import "../sass/mixinsvars.scss";
+@import "sass/mixinsvars.scss";
 
 // NAVBAR
 .nav_blur {
@@ -213,15 +213,11 @@ nav {
   &:focus {
     outline: none;
   }
-  &:hover svg {
-    transform: rotate(360deg);
-  }
-
-  svg {
+  img {
     transition: transform 10s ease-out;
-    fill: var(--white);
-    width: 20px;
-    height: 20px;
+  }
+  &:hover img {
+    transform: rotate(360deg);
   }
 }
 

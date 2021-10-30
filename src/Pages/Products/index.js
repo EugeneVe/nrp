@@ -2,10 +2,10 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBehanceSquare } from "@fortawesome/free-brands-svg-icons";
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
+import "./index.scss";
 
 const Product = () => (
   <div className="MainContent">
-    {/* <div className="product"> */}
     <div className="containerWarp contentInnerPages">
       <div className="anyPage">
         <div className="empty">
@@ -17,11 +17,7 @@ const Product = () => (
             design, art, front end website, <br /> please follow the link below.
           </p>
           <div className="behProd">
-            <a
-              href="https://www.behance.net/eugeneve"
-              className="behProdBtn"
-              target="blank"
-            >
+            <a href="https://www.behance.net/eugeneve" className="behProdBtn" target="blank">
               <FontAwesomeIcon icon={faBehanceSquare} />
               <p className="txtBehance">Please visit my page on Behance</p>
             </a>

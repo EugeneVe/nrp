@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Links from "./Links";
+import Links from "Components/Links";
+import "./index.scss";
 
 //Toggle Nav
 export const Burger = () => {
@@ -11,18 +12,16 @@ export const Burger = () => {
   //Animate Links
   navLinks.forEach((link, index) => {
     if (link.style.animation) {
-      link.style.animation = ""; //anuimate each time u open burger
+      link.style.animation = ""; //animate each time u open burger
     } else {
-      link.style.animation = `navLinkFade 200ms ease forwards ${
-        index / 5 + 0.2
-      }s`;
+      link.style.animation = `navLinkFade 200ms ease forwards ${index / 5 + 0.2}s`;
     }
   });
   //Burger Animation
   burger.classList.toggle("toggle");
 };
 
-export const NavBar = () => {
+const NavBar = () => {
   return (
     <div>
       <div className="nav_blur"></div>
@@ -46,3 +45,5 @@ export const NavBar = () => {
     </div>
   );
 };
+
+export default NavBar;

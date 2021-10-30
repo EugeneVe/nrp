@@ -1,5 +1,5 @@
 import React from "react";
-import Blurswitch from "./Blurswitch";
+import Blurswitch from "../Blurswitch";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";

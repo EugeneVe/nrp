@@ -1,6 +1,7 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import Moment from "react-moment";
+import "./index.scss";
 
 const Footer = () => (
   <div className="footerwrapper">
