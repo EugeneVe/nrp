@@ -4,24 +4,22 @@ import Wallnext from "Components/Wallnext";
 import Wallnextxxx from "Components/Wallnextxxx";
 import { Burger } from "Components/Navbar";
 
+const LinkForHeader = ({ title, link }) => {
+  return (
+    <Link to={link} className="navUnderlineNone navList navLis_animation" onClick={Burger}>
+      <span>{title}</span>
+    </Link>
+  );
+};
+
 const Links = () => (
   <>
     <Wallnextxxx />
-    <Link to="/" className="navUnderlineNone navList navLis_animation" onClick={Burger}>
-      <p>Home</p>
-    </Link>
-    <Link to="/about" className="navUnderlineNone navList navLis_animation" onClick={Burger}>
-      <p>About</p>
-    </Link>
-    <Link to="/product" className="navUnderlineNone navList navLis_animation" onClick={Burger}>
-      <p>Product</p>
-    </Link>
-    <Link to="/contact" className="navUnderlineNone navList navLis_animation" onClick={Burger}>
-      <p>Contact</p>
-    </Link>
-    <Link to="#" className="navUnderlineNone navList navLis_animation" onClick={Burger}>
-      <Wallnext />
-    </Link>
+    <LinkForHeader link="/" title="Home" />
+    <LinkForHeader link="/about" title="About" />
+    <LinkForHeader link="/product" title="Product" />
+    <LinkForHeader link="/contact" title="Contact" />
+    <LinkForHeader link="#" title={<Wallnext />} />
   </>
 );
 

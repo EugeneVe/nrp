@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const Blurswitch = () => {
   const [active, setActive] = useState(false);
   const istActive = () => setActive(!active);
+
   return (
     <>
       <div className="blurswitch__button">
