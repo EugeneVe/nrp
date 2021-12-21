@@ -19,12 +19,11 @@ const FavLinks = ({ link, title, icon }) => {
 
 const Favorites = () => {
   const [toggle, setToggle] = useState(false);
-  const isOpen = () => setToggle(!toggle);
 
   return (
     <div className="favContainer">
       <button className="favMargin navUnderlineNone sendButton">
-        <div onClick={() => isOpen()}>
+        <div onClick={() => setToggle(!toggle)}>
           <span>{toggle ? "Hide" : "Favorites"}</span>
         </div>
       </button>
