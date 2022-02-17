@@ -1,8 +1,8 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
-import courses_done from "assests/images/UC-33756c4b-b5b1-49ce-b0e6-4902d5ad32ae.jpg";
-import "./index.scss";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
+import courses_done from 'assests/images/UC-33756c4b-b5b1-49ce-b0e6-4902d5ad32ae.jpg';
+import './index.scss';
 
 const About = () => (
   <div className="MainContent">
@@ -60,7 +60,7 @@ const About = () => (
           <li>Experience in creating wireframes, mockups, prototypes;</li>
           <li>Creating full-stack projects based on Wordpress, Joomla;</li>
           <li>
-            Markup on HTML5, CSS3, SASS, LESS, JavaScript (ES6), Jquery, bootstrap (UI Bootstrap - AngularUI) AngularJS,{" "}
+            Markup on HTML5, CSS3, SASS, LESS, JavaScript (ES6), Jquery, bootstrap (UI Bootstrap - AngularUI) AngularJS,{' '}
             <b>React</b>;
           </li>
           <li>Custom icons and UI elements designs.</li>
