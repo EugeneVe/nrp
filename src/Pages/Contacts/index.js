@@ -1,19 +1,17 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
-import { faUser, faPhone, faEnvelope, faComment, faPaperclip } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faFacebookSquare, faInstagramSquare, faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
-import "./index.scss";
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faPhone, faEnvelope, faComment, faPaperclip } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faFacebookSquare, faInstagramSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import './index.scss';
 
 const Contact = () => {
-  const loadImage = (event) => {
-    const wallUrl = "--mainblockbg";
-    document.documentElement.style.setProperty(wallUrl, "url(" + URL.createObjectURL(event.target.files[0]) + ")");
-    const pic = document.getElementById("inpPreview");
-    pic.src = URL.createObjectURL(event.target.files[0]);
-    pic.onload = () => {
-      URL.revokeObjectURL(pic.src); // clearing memory
-    };
+  const [selectedImage, setSelectedImage] = useState('');
+
+  const loadImage = (e) => {
+    let wallUrl = '--mainblockbg';
+    document.documentElement.style.setProperty(wallUrl, 'url(' + URL.createObjectURL(e.target.files[0]) + ')');
+    setSelectedImage(e.target.files[0]);
   };
 
   return (
@@ -115,8 +113,7 @@ const Contact = () => {
               <input type="text" name="_gotcha" className="spam" />
               <button className="navUnderlineNone sendButton">SEND</button>
               <div className="inpPreviewContainer">
-                <span className="imgError">Attached image</span>
-                <img id="inpPreview" alt=" " />
+                {!selectedImage ? '' : <img id="inpPreview" src={URL.createObjectURL(selectedImage)} alt=" " />}
               </div>
             </form>
           </div>

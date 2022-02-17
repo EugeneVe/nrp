@@ -1,4 +1,4 @@
-@import "sass/mixinsvars.scss";
+@import 'sass/mixinsvars.scss';
 
 .social {
   display: flex;
@@ -88,11 +88,11 @@
   }
 }
 
-input[type="file"]::-webkit-file-upload-button {
+input[type='file']::-webkit-file-upload-button {
   visibility: hidden;
   width: 0 !important;
 }
-input[type="file"] {
+input[type='file'] {
   padding-top: 6px !important;
   padding-left: 20px !important;
   cursor: pointer;
@@ -122,10 +122,9 @@ input[type="file"] {
   margin: 20px 0 10px 0;
   border-radius: 50%;
   overflow: hidden;
-  .imgError {
-    position: absolute;
-    text-align: center;
-    @include flexMain;
+  svg {
+    height: 100px;
+    width: 100px;
   }
   #inpPreview {
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3) inset, -2px -2px 8px 0 rgba(255, 255, 255, 0.25) inset;

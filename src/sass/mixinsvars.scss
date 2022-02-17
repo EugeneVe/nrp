@@ -1,6 +1,6 @@
 // Variables
 :root {
-  --mainblockbg: url("https://source.unsplash.com/1920x1080/?beach"); //eugenev.000webhostapp.com/randomwall.php
+  --mainblockbg: url('https://source.unsplash.com/1920x1080/?beach');
   --blur: blur(20px) !important;
 
   // Color Scheme
@@ -12,12 +12,10 @@
 
 // Mixin
 @mixin nemorphBox {
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3),
-    -2px -2px 8px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3), -2px -2px 8px 0 rgba(255, 255, 255, 0.25);
 }
 @mixin neomorphBoxHover {
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3),
-    -2px -2px 8px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3), -2px -2px 8px 0 rgba(255, 255, 255, 0.25);
   border-radius: 50px;
 }
 @mixin background {
