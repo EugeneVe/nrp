@@ -1,48 +1,64 @@
-import React, { useState, useEffect } from "react";
-import Moment from "react-moment";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import Favorites from "Components/Favorites";
-import quotesArrey from "json/quotes.json";
-import Arrow from "assests/images/arrow.svg";
-import "./index.scss";
+import React, { useState, useEffect } from 'react';
+import Moment from 'react-moment';
+import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import InputName from 'Components/InputName/InputName';
+import Favorites from 'Components/Favorites';
+import Skeleton from '@mui/material/Skeleton';
+import Arrow from 'assests/images/arrow.svg';
+import Quote from './Quote/Quote';
+import './index.scss';
+// import quotesArrey from 'json/quotes.json';
 
-const Home = ({ initialName = "" }) => {
-  const [name, setName] = useState(() => window.localStorage.getItem("name") || initialName);
+const Home = ({ initialName = '' }) => {
+  const [name, setName] = useState(() => window.localStorage.getItem('name') || initialName);
+  const [loading, setLoading] = useState(false);
+  const [quote, setQuote] = useState([]);
+
   useEffect(() => {
-    window.localStorage.setItem("name", name);
+    window.localStorage.setItem('name', name);
   }, [name]);
-  const handleChange = (event) => {
-    setName(event.target.value);
-  };
+
+  useEffect(() => {
+    const data = {
+      method: 'GET',
+      url: `https://goquotes-api.herokuapp.com/api/v1/random/1?type=tag&val=motivational`,
+    };
+    setLoading(true);
+    axios(data)
+      .then((response) => {
+        if (response.status >= 200 && response.status <= 300) {
+          return setQuote(response.data);
+        }
+      })
+      .catch((error) => {
+        console.error(error.response.data);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
   // Date & Greeter
   const currentHour = new Date().getHours();
 
   const greetingMessage =
     currentHour >= 4 && currentHour < 12
-      ? "Good morning"
+      ? 'Good morning'
       : currentHour >= 12 && currentHour <= 17
-      ? "Good afternoon"
+      ? 'Good afternoon'
       : currentHour > 17 || currentHour < 4
-      ? "Good evening"
-      : "Welcome";
-  // Quotes
-  const randomQuote = Math.floor(Math.random() * quotesArrey.length);
-  const quotes = quotesArrey[randomQuote];
+      ? 'Good evening'
+      : 'Welcome';
+
+  // Quotes Old version
+  // const randomQuote = Math.floor(Math.random() * quotesArrey.length);
+  // const quotes = quotesArrey[randomQuote];
 
   return (
     <>
-      <form className="enterYourName formInner">
-        <label htmlFor="name" className="labelNameStyle" />
-        <input
-          title="Your name for Greeter"
-          defaultValue=""
-          onChange={handleChange}
-          id="name"
-          placeholder="Your name"
-        />
-      </form>
+      <InputName onChange={(e) => setName(e.target.value)} />
       <div className="MainContent">
         <div className="containerWarp contentInnerPages">
           <div className="anyPage">
@@ -63,7 +79,7 @@ const Home = ({ initialName = "" }) => {
               </div>
               <div className="dateTimeContent">
                 <h1 title="Please enter your name">
-                  {greetingMessage} {name ? <>{name}</> : "Guest"}
+                  {greetingMessage} {name ? <>{name}</> : 'Guest'}
                 </h1>
                 <span>
                   Today is <Moment format="dddd DD.MM.YYYY" />
@@ -71,8 +87,17 @@ const Home = ({ initialName = "" }) => {
                 <h2>
                   <Moment format="HH:mm" />
                 </h2>
-                <h3>{quotes}</h3>
               </div>
+              {/* <h3>{quotes}</h3> */}
+              {loading ? (
+                <Skeleton variant="text" animation="wave" height={60} width={`${100}%`} />
+              ) : (
+                <>
+                  {quote?.quotes?.map((quote, index) => {
+                    return <Quote key={index} quote={quote} />;
+                  })}
+                </>
+              )}
               <div className="favorites">
                 <Favorites />
               </div>

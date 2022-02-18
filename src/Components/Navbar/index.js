@@ -1,24 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Links from "Components/Links";
-import "./index.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Links from 'Components/Links';
+import './index.scss';
 
 //Toggle Nav
 export const Burger = () => {
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".navLis_animation");
-  nav.classList.toggle("nav-active");
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.navLis_animation');
+  nav.classList.toggle('nav-active');
   //Animate Links
   navLinks.forEach((link, index) => {
     if (link.style.animation) {
-      link.style.animation = ""; //animate each time u open burger
+      link.style.animation = ''; //animate each time u open burger
     } else {
       link.style.animation = `navLinkFade 200ms ease forwards ${index / 5 + 0.2}s`;
     }
   });
   //Burger Animation
-  burger.classList.toggle("toggle");
+  burger.classList.toggle('toggle');
 };
 
 const NavBar = () => {
