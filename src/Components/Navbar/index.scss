@@ -1,4 +1,4 @@
-@import "sass/mixinsvars.scss";
+@import 'sass/mixinsvars.scss';
 
 // NAVBAR
 .nav_blur {
@@ -202,6 +202,17 @@ nav {
     color: transparent;
     background-clip: text;
   }
+}
+.enter-your-name {
+  padding: 0px 10px 0px 10px;
+  width: 140px;
+  margin: 17px 90px;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.219);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--white);
+  outline: none;
 }
 // LOGOG END
 

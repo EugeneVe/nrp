@@ -21,7 +21,7 @@ export const Burger = () => {
   burger.classList.toggle('toggle');
 };
 
-const NavBar = () => {
+const NavBar = ({ setName }) => {
   return (
     <div>
       <div className="nav_blur"></div>
@@ -31,6 +31,7 @@ const NavBar = () => {
             <span>EV</span>
           </div>
         </Link>
+        <input className="enter-your-name" onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
         <div className="nav-links">
           <Links />
         </div>
