@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AllContext } from 'AllContext';
 import Links from 'Components/Links';
 import './index.scss';
 
@@ -21,7 +22,9 @@ export const Burger = () => {
   burger.classList.toggle('toggle');
 };
 
-const NavBar = ({ setName }) => {
+const NavBar = () => {
+  const [name, setName] = useContext(AllContext);
+
   return (
     <div>
       <div className="nav_blur"></div>

@@ -1,41 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Moment from 'react-moment';
-import axios from 'axios';
+import { AllContext } from 'AllContext';
+import Quotes from 'Components/Quotes/Quotes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Favorites from 'Components/Favorites';
-import Skeleton from '@mui/material/Skeleton';
 import Arrow from 'assests/images/arrow.svg';
-import Quote from './Quote/Quote';
+import Weather from 'Components/Weather/Weather';
 import './index.scss';
 
-const Home = ({ name }) => {
-  const [loading, setLoading] = useState(false);
-  const [quote, setQuote] = useState([]);
-
-  useEffect(() => {
-    localStorage.setItem('name', name);
-  }, [name]);
-
-  useEffect(() => {
-    const data = {
-      method: 'GET',
-      url: `https://goquotes-api.herokuapp.com/api/v1/random/1?type=tag&val=motivational`,
-    };
-    setLoading(true);
-    axios(data)
-      .then((response) => {
-        if (response.status >= 200 && response.status <= 300) {
-          return setQuote(response.data);
-        }
-      })
-      .catch((error) => {
-        console.error(error.response.data);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
+const Home = () => {
+  const [name, setName] = useContext(AllContext);
 
   // Date & Greeter
   const currentHour = new Date().getHours();
@@ -79,15 +54,8 @@ const Home = ({ name }) => {
                 <Moment format="HH:mm" />
               </h2>
             </div>
-            {loading ? (
-              <Skeleton variant="text" animation="wave" height={60} width={`${100}%`} />
-            ) : (
-              <>
-                {quote?.quotes?.map((quote, index) => {
-                  return <Quote key={index} quote={quote} />;
-                })}
-              </>
-            )}
+            <Weather />
+            <Quotes />
             <div className="favorites">
               <Favorites />
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavBar from 'Components/Navbar';
 import Home from 'Pages/Home';
 import About from 'Pages/About';
@@ -13,34 +13,35 @@ import Switch from 'react-router-transition-switch';
 import Fader from 'react-fader';
 import CookieBanner from 'react-cookie-banner';
 import { Lines } from 'react-preloaders';
+import { ContextProvider } from 'AllContext';
 import 'sass/style.scss';
 
 const App = () => {
-  const [name, setName] = useState(() => localStorage.getItem('name'));
-
   return (
-    <Router>
-      <Lines background="radial-gradient(circle, rgba(15,15,15,1) 0%, rgba(32,32,32,1) 100%)" />
-      <NavBar setName={setName} />
-      <Switch component={Fader}>
-        <Route path="/" exact component={() => <Home name={name} />} />
-        <Route path="/about" component={About} />
-        <Route path="/product" component={Product} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/mailsent" component={Email} />
-        <Route component={Page404} />
-      </Switch>
-      <Blurswitch />
-      <Footer />
-      <CookieBanner
-        className="react-cookie-banner"
-        message="Yes, my website use cookies!"
-        onAccept={() => {
-          alert('Thanks for understanding');
-        }}
-        cookie="user-has-accepted-cookies"
-      />
-    </Router>
+    <ContextProvider>
+      <Router>
+        <Lines background="radial-gradient(circle, rgba(15,15,15,1) 0%, rgba(32,32,32,1) 100%)" />
+        <NavBar />
+        <Switch component={Fader}>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/product" component={Product} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/mailsent" component={Email} />
+          <Route component={Page404} />
+        </Switch>
+        <Blurswitch />
+        <Footer />
+        <CookieBanner
+          className="react-cookie-banner"
+          message="Yes, my website use cookies!"
+          onAccept={() => {
+            alert('Thanks for understanding');
+          }}
+          cookie="user-has-accepted-cookies"
+        />
+      </Router>
+    </ContextProvider>
   );
 };
 export default App;

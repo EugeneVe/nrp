@@ -32,6 +32,7 @@
     "react-router-transition": "^2.1.0",
     "react-router-transition-switch": "^1.1.2",
     "react-scripts": "3.3.0",
+    "use-position": "^1.0.0",
     "yarn": "^1.22.17"
   },
   "scripts": {

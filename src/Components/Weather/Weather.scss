@@ -1,0 +1,22 @@
+.weather-wrapper {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  opacity: 0.6;
+  p {
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: 26px;
+    .no-weather {
+      font-size: 16px;
+    }
+    svg {
+      fill: var(--white);
+      width: 14px;
+      height: fit-content;
+      margin-bottom: 3px;
+    }
+  }
+}
