@@ -1,0 +1,27 @@
+@import 'sass/mixinsvars.scss';
+
+label {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  position: relative;
+  transition: all 300ms;
+  svg {
+    fill: var(--white);
+    height: 18px;
+    width: 18px;
+    transition: all 300ms;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .bg-select {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+  }
+  &:hover {
+    @include neomorphBoxHover;
+  }
+}

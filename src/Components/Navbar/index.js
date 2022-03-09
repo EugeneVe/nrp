@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AllContext } from 'AllContext';
 import Links from 'Components/Links';
+import BackgroundCustom from 'Components/BackgroundCustom/BackgroundCustom';
 import './index.scss';
 
 //Toggle Nav
@@ -37,6 +38,7 @@ const NavBar = () => {
           </div>
         </Link>
         <input className="enter-your-name" onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
+        <BackgroundCustom />
         <div className="nav-links">
           <Links />
         </div>

@@ -20,7 +20,7 @@ const Quotes = () => {
         }
       })
       .catch((error) => {
-        console.error(error.response.data);
+        console.log(error.response.data);
       })
       .finally(() => {
         setLoading(false);
