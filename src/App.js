@@ -17,6 +17,10 @@ import { ContextProvider } from 'AllContext';
 import 'sass/style.scss';
 
 const App = () => {
+  const getImageFromStorage = localStorage.getItem('recent-image');
+  const wallUrl = '--mainblockbg';
+  document.documentElement.style.setProperty(wallUrl, 'url(' + getImageFromStorage + ')');
+
   return (
     <ContextProvider>
       <Router>

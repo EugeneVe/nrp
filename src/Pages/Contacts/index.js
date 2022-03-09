@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
 import { faUser, faPhone, faEnvelope, faComment, faPaperclip } from '@fortawesome/free-solid-svg-icons';
@@ -6,13 +6,33 @@ import { faLinkedin, faFacebookSquare, faInstagramSquare, faTwitterSquare } from
 import './index.scss';
 
 const Contact = () => {
-  const [selectedImage, setSelectedImage] = useState('');
+  const [selectedImage, setSelectedImage] = useState(() => localStorage.getItem('recent-image'));
 
-  const loadImage = (e) => {
-    let wallUrl = '--mainblockbg';
-    document.documentElement.style.setProperty(wallUrl, 'url(' + URL.createObjectURL(e.target.files[0]) + ')');
-    setSelectedImage(e.target.files[0]);
+  const loadImage = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setSelectedImage(base64);
   };
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
+
+  useEffect(() => {
+    localStorage.setItem('recent-image', selectedImage);
+    const getImageFromStorage = localStorage.getItem('recent-image');
+    const wallUrl = '--mainblockbg';
+    document.documentElement.style.setProperty(wallUrl, 'url(' + getImageFromStorage + ')');
+  }, [selectedImage]);
 
   return (
     <div className="MainContent">
@@ -113,7 +133,7 @@ const Contact = () => {
               <input type="text" name="_gotcha" className="spam" />
               <button className="navUnderlineNone sendButton">SEND</button>
               <div className="inpPreviewContainer">
-                {!selectedImage ? '' : <img id="inpPreview" src={URL.createObjectURL(selectedImage)} alt=" " />}
+                {!selectedImage ? '' : <img id="inpPreview" src={selectedImage} alt=" " />}
               </div>
             </form>
           </div>
