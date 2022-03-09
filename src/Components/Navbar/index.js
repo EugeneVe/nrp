@@ -31,6 +31,8 @@ const NavBar = () => {
       <nav>
         <Link to="/">
           <div className="myBrand">
+            <div className="flag-blue" />
+            <div className="flag-yellow" />
             <span>EV</span>
           </div>
         </Link>

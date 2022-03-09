@@ -29,7 +29,12 @@ const Home = () => {
       <div className="containerWarp contentInnerPages">
         <div className="anyPage">
           <div className="empty">
-            <h3 className="name">Eugene Veprytskyi page</h3>
+            <h3 className="name">
+              <a href="https://www.instagram.com/explore/tags/nowar/" target="blank">
+                #NOWAR
+              </a>
+              <div className="line" />
+            </h3>
             <div className="searchWrapper">
               <div className="formWrap">
                 <div className="searchIcon">
