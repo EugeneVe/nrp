@@ -21,6 +21,7 @@ html {
 body {
   @include background;
   background-image: var(--mainblockbg);
+  background-repeat: no-repeat;
   background-color: var(--darkgray) !important;
   overflow-x: hidden;
   @media (max-width: 1024px) {
@@ -221,7 +222,7 @@ a:hover {
   &:hover {
     @include nemorphBox;
     backdrop-filter: var(--blur);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--darkgray);
     transition: box-shadow 500ms ease, background-color 500ms ease;
   }
 }

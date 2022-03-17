@@ -9,7 +9,7 @@
   background-color: var(--darkgray);
   border-radius: 15px;
   margin: 3px;
-  backdrop-filter: blur(15px);
+  backdrop-filter: var(--blur);
   border: solid rgba(255, 255, 255, 0.1) 1px;
   z-index: 2;
 }
@@ -22,6 +22,56 @@ nav {
   height: var(--nav_heigth);
   margin: 3px;
   z-index: 9;
+  .name-enter-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 0 20px;
+    @media screen and(max-width:768px) {
+      margin: 0 0 0 0;
+    }
+    button {
+      transition: all 300ms;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 42px;
+      width: 42px;
+      &:hover {
+        @include neomorphBoxHover;
+        transform: scale(1.1);
+      }
+      svg {
+        height: 18px;
+        width: fit-content;
+        opacity: 0.8;
+        fill: var(--white);
+      }
+    }
+    .input-wrapper {
+      overflow: hidden;
+      min-width: 0px;
+      transition: all 300ms;
+      .enter-your-name {
+        padding: 0px 10px 0px 10px;
+        width: 140px;
+        margin: 17px;
+        height: 30px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.219);
+        background-color: rgba(0, 0, 0, 0.2);
+        color: var(--white);
+        outline: none;
+      }
+    }
+    .enter-your-name-hidden {
+      width: 0;
+    }
+    .enter-your-name-open {
+      width: 160px;
+    }
+  }
 }
 
 .fixed-top {
@@ -42,7 +92,7 @@ nav {
 
 .navList {
   margin: 0 1vw 0 1vw;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms;
   padding: 3px 10px 3px 10px;
   border-radius: 50px;
   border: solid rgba(255, 255, 255, 0) 1px;
@@ -54,12 +104,12 @@ nav {
     padding: 3px 10px 3px 10px;
     margin: 3vh !important;
     transform: translateX(100vw);
-    transition: transform 200ms ease-in;
+    transition: transform 200ms;
   }
 }
 .navList:hover {
   @include neomorphBoxHover;
-  border: solid rgba(255, 255, 255, 0.1) 1px;
+  transform: scale(1.1);
 }
 
 #navbar__content {
@@ -89,6 +139,24 @@ nav {
   right: 0;
   height: 65px;
   top: 0;
+  .black-white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 0 20px;
+    width: 42px;
+    height: 42px;
+    transition: all 300ms;
+    &:hover {
+      @include neomorphBoxHover;
+      transform: scale(1.1);
+    }
+    svg {
+      fill: var(--white);
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .nav-links a {
@@ -219,17 +287,7 @@ nav {
     bottom: 0;
   }
 }
-.enter-your-name {
-  padding: 0px 10px 0px 10px;
-  width: 140px;
-  margin: 17px 90px;
-  height: 30px;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.219);
-  background-color: rgba(0, 0, 0, 0.2);
-  color: var(--white);
-  outline: none;
-}
+
 // LOGOG END
 
 // SWITCH BACKGROUND BUTTON
@@ -241,10 +299,11 @@ nav {
   &:focus {
     outline: none;
   }
-  img {
+  svg {
     transition: transform 10s ease-out;
+    fill: var(--white);
   }
-  &:hover img {
+  &:hover svg {
     transform: rotate(360deg);
   }
 }

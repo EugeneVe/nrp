@@ -1,6 +1,6 @@
-import React from "react";
-import walls from "json/walls.json";
-import next from "assests/images/next.svg";
+import React from 'react';
+import walls from 'json/walls.json';
+import { ReactComponent as Next } from 'assests/images/next.svg';
 
 const Wallnext = () => {
   // Set the wallpaper from array
@@ -19,14 +19,14 @@ const Wallnext = () => {
   const getWall = () => walls[changeThisWall()];
 
   const changeWall = () => {
-    const wallUrl = "--mainblockbg";
+    const wallUrl = '--mainblockbg';
     document.documentElement.style.setProperty(wallUrl, getWall());
   };
 
   return (
     <>
       <div className="switchBg" type="button" onClick={changeWall} title="Next background">
-        <img src={next} alt="" />
+        <Next />
       </div>
     </>
   );

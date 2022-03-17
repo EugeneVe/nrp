@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Email = () => (
   <div className="MainContent">
@@ -15,7 +15,7 @@ const Email = () => (
             </p>
             <p>Go back to main page</p>
             <Link to="/" className="navUnderlineNone sendButton">
-              <p>Home</p>
+              Home
             </Link>
           </div>
         </div>
