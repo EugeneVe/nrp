@@ -85,6 +85,7 @@
   transition: all 200ms ease-in-out;
   &:hover {
     @include neomorphBoxHover;
+    color: var(--white);
   }
 }
 

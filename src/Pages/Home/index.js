@@ -5,7 +5,7 @@ import Quotes from 'Components/Quotes/Quotes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Favorites from 'Components/Favorites';
-import Arrow from 'assests/images/arrow.svg';
+import { ReactComponent as Arrow } from 'assests/images/arrow.svg';
 import Weather from 'Components/Weather/Weather';
 import './index.scss';
 
@@ -43,7 +43,7 @@ const Home = () => {
                     <input className="formInner" placeholder="google search" type="search" name="q" />
                   </form>
                   <button form="search" className="gSearchBtn" alt="Google search" type="submit" title="search">
-                    <img src={Arrow} alt="" />
+                    <Arrow />
                   </button>
                 </div>
               </div>
@@ -59,7 +59,14 @@ const Home = () => {
                 <Moment format="HH:mm" />
               </h2>
             </div>
-            <Weather />
+            <a
+              href="https://weather.com/uk-UA/weather/today"
+              title="Weather.com"
+              target="blank"
+              className="weather-link"
+            >
+              <Weather />
+            </a>
             <Quotes />
             <div className="favorites">
               <Favorites />

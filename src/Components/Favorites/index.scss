@@ -29,10 +29,10 @@
     cursor: pointer;
     &:hover {
       opacity: 1;
-      transform: scale(1.1);
+      transform: scale(1.06);
     }
     svg {
-      fill: #fff !important;
+      fill: var(--white);
     }
   }
   @media only screen and (max-height: 735px) {
@@ -41,6 +41,9 @@
 }
 .fav-inside-open {
   height: 50px;
+  @media screen and (max-width: 735px) {
+    height: 100px;
+  }
 }
 .fav-inside-hidden {
   height: 0px;

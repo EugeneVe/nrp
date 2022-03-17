@@ -23,7 +23,12 @@
     font-size: 8vw;
   }
 }
-
+.weather-link {
+  color: var(--white);
+  &:hover {
+    color: var(--white);
+  }
+}
 // Google Search
 .searchWrapper {
   @media (max-width: 1024px) and (orientation: portrait) {
@@ -95,6 +100,11 @@ input::-webkit-search-cancel-button {
     }
     &:hover {
       @include neomorphBoxHover;
+    }
+    svg {
+      fill: var(--white);
+      width: 18px;
+      height: 18px;
     }
   }
   & .googleSearch {

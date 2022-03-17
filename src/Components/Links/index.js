@@ -1,8 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Wallnext from "Components/Wallnext";
-import Wallnextxxx from "Components/Wallnextxxx";
-import { Burger } from "Components/Navbar";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Wallnext from 'Components/Wallnext';
+import Wallnextxxx from 'Components/Wallnextxxx';
+import BackgroundCustom from 'Components/BackgroundCustom/BackgroundCustom';
+import { Burger } from 'Components/Navbar';
 
 const LinkForHeader = ({ title, link }) => {
   return (
@@ -20,6 +21,7 @@ const Links = () => (
     <LinkForHeader link="/product" title="Product" />
     <LinkForHeader link="/contact" title="Contact" />
     <LinkForHeader link="#" title={<Wallnext />} />
+    <BackgroundCustom />
   </>
 );
 

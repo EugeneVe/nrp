@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import FavLinks from './FavLinks/FavLinks';
-import Weather from 'assests/images/weather.svg';
-import GoogleImage from 'assests/images/googleImage.svg';
-import GoogleTranslate from 'assests/images/googleTranslate.svg';
-import GoogleNews from 'assests/images/googleNews.svg';
-import YouTube from 'assests/images/youTube.svg';
-import Twitter from 'assests/images/twitter.svg';
-import Inoreader from 'assests/images/inoreader.svg';
-import Facebook from 'assests/images/facebook.svg';
+// import { ReactComponent as Weather } from 'assests/images/weather.svg';
+import { ReactComponent as GoogleImage } from 'assests/images/googleImage.svg';
+import { ReactComponent as GoogleTranslate } from 'assests/images/googleTranslate.svg';
+import { ReactComponent as GoogleNews } from 'assests/images/googleNews.svg';
+import { ReactComponent as YouTube } from 'assests/images/youTube.svg';
+import { ReactComponent as Twitter } from 'assests/images/twitter.svg';
+import { ReactComponent as Inoreader } from 'assests/images/inoreader.svg';
+import { ReactComponent as Facebook } from 'assests/images/facebook.svg';
+import { ReactComponent as Instagram } from 'assests/images/instagram.svg';
 import './index.scss';
 
 const Favorites = () => {
@@ -22,14 +23,15 @@ const Favorites = () => {
       </button>
 
       <div className={`fav-inside ${!toggle ? 'fav-inside-hidden' : 'fav-inside-open'}`}>
-        <FavLinks title="Weather" link="https://weather.com/uk-UA/weather/today/l/UPXX0014:1:UP" icon={Weather} />
-        <FavLinks title="Google image search" link="https://images.google.com/" icon={GoogleImage} />
-        <FavLinks title="Google Translate" link="https://translate.google.com.ua" icon={GoogleTranslate} />
-        <FavLinks title="Google News" link="https://news.google.com" icon={GoogleNews} />
-        <FavLinks title="YouTube" link="https://youtube.com" icon={YouTube} />
-        <FavLinks title="Twitter" link="https://twitter.com" icon={Twitter} />
-        <FavLinks title="Inoreader" link="https://www.inoreader.com" icon={Inoreader} />
-        <FavLinks title="Facebook" link="https://www.facebook.com" icon={Facebook} />
+        {/* <FavLinks title="Weather" link="https://weather.com/uk-UA/weather/today/l/UPXX0014:1:UP" icon={Weather} /> */}
+        <FavLinks title="Google image search" link="https://images.google.com/" icon={<GoogleImage />} />
+        <FavLinks title="Deepl Translate" link="https://www.deepl.com/translator" icon={<GoogleTranslate />} />
+        <FavLinks title="Google News" link="https://news.google.com" icon={<GoogleNews />} />
+        <FavLinks title="YouTube" link="https://youtube.com" icon={<YouTube />} />
+        <FavLinks title="Instagram" link="https://www.instagram.com/" icon={<Instagram />} />
+        <FavLinks title="Twitter" link="https://twitter.com" icon={<Twitter />} />
+        <FavLinks title="Inoreader" link="https://www.inoreader.com" icon={<Inoreader />} />
+        <FavLinks title="Facebook" link="https://www.facebook.com" icon={<Facebook />} />
       </div>
     </div>
   );
