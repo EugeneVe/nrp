@@ -14,3 +14,21 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   }
 }
+a {
+  color: var(--white) !important;
+}
+.about-description {
+  svg {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    fill: var(--white);
+    transition: all 200ms;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.title-cv {
+  font-size: 1.2rem;
+}

@@ -7,7 +7,7 @@ import { Burger } from 'Components/Navbar';
 
 const LinkForHeader = ({ title, link }) => {
   return (
-    <Link to={link} className="navUnderlineNone navList navLis_animation" onClick={Burger}>
+    <Link to={link} className="navUnderlineNone navList" onClick={Burger}>
       <span>{title}</span>
     </Link>
   );

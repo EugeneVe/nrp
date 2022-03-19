@@ -11,16 +11,16 @@ import './index.scss';
 export const Burger = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.navLis_animation');
+  // const navLinks = document.querySelectorAll('.navLis_animation');
   nav.classList.toggle('nav-active');
   //Animate Links
-  navLinks.forEach((link, index) => {
-    if (link.style.animation) {
-      link.style.animation = ''; //animate each time u open burger
-    } else {
-      link.style.animation = `navLinkFade 200ms ease forwards ${index / 5 + 0.2}s`;
-    }
-  });
+  // navLinks.forEach((link, index) => {
+  //   if (link.style.animation) {
+  //     link.style.animation = ''; //animate each time u open burger
+  //   } else {
+  //     link.style.animation = `navLinkFade 200ms ease forwards ${index / 5 + 0.2}s`;
+  //   }
+  // });
   //Burger Animation
   burger.classList.toggle('toggle');
 };
@@ -35,7 +35,7 @@ const NavBar = () => {
   const changeColor = () => {
     setDayNight(!dayNight);
     if (dayNight) {
-      document.documentElement.style.setProperty(whiteColor, 'rgba(0,0,0, 0.9)');
+      document.documentElement.style.setProperty(whiteColor, 'rgba(20, 20, 20, 1)');
       document.documentElement.style.setProperty(darkColor, 'rgba(255,255,255,0.5)');
     } else {
       document.documentElement.style.setProperty(whiteColor, 'rgba(255,255,255,0.9)');

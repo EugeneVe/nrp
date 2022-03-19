@@ -1,8 +1,6 @@
 @import 'sass/mixinsvars.scss';
-@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
 .empty .name {
-  font-family: 'Allura', cursive;
   font-size: 3vw;
   position: relative;
   a {
@@ -13,9 +11,9 @@
   }
   .line {
     position: absolute;
-    bottom: 10px;
-    width: 0%;
-    height: 2px;
+    bottom: 0;
+    width: 0;
+    height: 4px;
     background-color: var(--white);
     transition: all 300ms ease-in-out;
   }

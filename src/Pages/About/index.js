@@ -1,6 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
+import { ReactComponent as Download } from 'assests/images/download.svg';
+import Tooltip from '@mui/material/Tooltip';
 import courses_done from 'assests/images/UC-33756c4b-b5b1-49ce-b0e6-4902d5ad32ae.jpg';
 import './index.scss';
 
@@ -13,33 +15,48 @@ const About = () => (
           <FontAwesomeIcon icon={faFeatherAlt} />
         </p>
         <h3>Hello, my name is Eugene Veprytskyi</h3>
-        <p>
-          I`m web designer with several years of experience and i am looking for further training, challenges and
-          experience while working towards a career in Web Design and UI-UX Design in an IT Company.
+        <p className="about-description">
+          I am purposeful, reliable, creative and fast learning web developer with experience at few project is looking
+          for further training and experience while working towards a career in Frontend Web Development, 100% team
+          player, friendly, passionate, supportive.
+          <Tooltip title={<span className="title-cv">Download my CV</span>} arrow>
+            <a
+              className="cv-link"
+              href="https://mega.nz/file/FMY3ARJY#QcvxrEWqHgk-lVZ-vUpbKuQVkw0s5IjMzJj6B253BRg"
+              target="blank"
+            >
+              <Download />
+            </a>
+          </Tooltip>
         </p>
+        <h3>Languages</h3>
+        <div className="flexColumn">
+          <ul>
+            <li>English: Pre-Intermediate</li>
+            <li>Ukrainian: Native</li>
+            <li>Russian: Native</li>
+          </ul>
+        </div>
         <h3>Skills</h3>
         <div className="flexColumn">
           <ul>
+            <li>UI/UX Design</li>
             <li>HTML5 - Deep Knowledge</li>
-            <li>BEM — Block Element Modifier</li>
             <li>CSS ( CSS3, SASS, LESS ) - Deep Knowledge</li>
             <li>
               JavaScript (ES6) - Base:
               <ul>
-                <li>React</li>
-                <li>AngularJS</li>
-                <li>AngularUI</li>
+                <li>React JS</li>
+                <li>Material UI</li>
                 <li>Jquery</li>
               </ul>
             </li>
           </ul>
           <ul>
-            <li>Web Design</li>
-            <li>UI/UX Design</li>
-            <li>Adobe Photoshop - Deep Knowledge</li>
-            <li>Adobe Illustrator - Deep Knowledge</li>
-            <li>Adobe XD</li>
             <li>Figma</li>
+            <li>Adobe Illustrator - Deep Knowledge</li>
+            <li>Adobe Photoshop - Deep Knowledge</li>
+            <li>Adobe XD</li>
             <li>Experience with Git</li>
           </ul>
         </div>
@@ -52,27 +69,81 @@ const About = () => (
             represents the total video hours of the course at time of most recent completion.
           </p>
         </div>
-        <h3>Experience</h3>
+        <h3>Projects</h3>
+        <ul>
+          <li>
+            <b>Time period:</b> September 2021 – Febrary 2022
+          </li>
+          <li>
+            <b>Position:</b> UI/UX design, Front-end developer
+          </li>
+          <li>
+            <b>Project:</b> <a href="https://bulbee.org">https://bulbee.org</a>
+          </li>
+          <li>
+            <b>Technologies:</b> Figma, React JS, MUI, SASS.
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <b>Time period:</b> December 2020 – March 2021
+          </li>
+          <li>
+            <b> Position:</b>Front-End developer (React) UI/UX design{' '}
+          </li>
+          <li>
+            <b> Project: </b> <a href="http://eugenev.space">http://eugenev.space</a> CV Website (own home page).
+          </li>
+          <li>
+            {' '}
+            <b>Technologies:</b> Figma, Adobe Photoshop, HTML5, CSS3, SASS, JavaScript, React, hosting setup, deploy.
+          </li>
+        </ul>
 
         <ul>
-          <p>NOVEMBER 2015 – PRESENT</p>
-          <li>Web Designer, Front End Developer / Freelance</li>
-          <li>Experience in creating wireframes, mockups, prototypes;</li>
-          <li>Creating full-stack projects based on Wordpress, Joomla;</li>
           <li>
-            Markup on HTML5, CSS3, SASS, LESS, JavaScript (ES6), Jquery, bootstrap (UI Bootstrap - AngularUI) AngularJS,{' '}
-            <b>React</b>;
+            <b>Time period:</b> March 2020 – May 2020
           </li>
-          <li>Custom icons and UI elements designs.</li>
+          <li>
+            <b>Position:</b> Full Stack WordPress developer
+          </li>
+          <li>
+            <b>Project:</b> <a href="http://arhzemproekt.kh.ua">http://arhzemproekt.kh.ua</a> Business Card Website,
+            with online service ordering (custom PHP function).
+          </li>
+          <li>
+            <b>Technologies:</b> WP, Figma, Adobe Photoshop, HTML, SASS, JavaScript, PHP, hosting setup, deploy.
+          </li>
         </ul>
-        <h3>Education</h3>
         <ul>
-          <p>2005 - 2011</p>
-          <li>Specialist / Kharkiv National University "Politechnical Institute"</li>
-          <li>Computer Technologies and Network</li>
-          <p>1999 - 2004</p>
-          <li>Specialist / Kharkiv National University of Internal Affairs</li>
-          <li>Jurisprudence</li>
+          <li>
+            <b>Time period:</b> September 2019 – October 2019{' '}
+          </li>
+          <li>
+            <b>Position:</b> Full Stack WordPress developer{' '}
+          </li>
+          <li>
+            <b>Project:</b> <a href="https://advokat-veprytskyi.com">https://advokat-veprytskyi.com</a> Business Card
+            Website
+          </li>
+          <li>
+            <b>Technologies:</b> WP, Figma, Adobe Photoshop, HTML, SASS, JavaScript, PHP, hosting setup, deploy.
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <b>Time period:</b> September 2017 – November 2017{' '}
+          </li>
+          <li>
+            <b>Position:</b> UI/UX design{' '}
+          </li>
+          <li>
+            <b>Project:</b> <a href="https://metalist1925.club">https://metalist1925.club</a> e-ticket website of local
+            football club
+          </li>
+          <li>
+            <b>Technologies:</b> Figma, AI, Adobe Photoshop.
+          </li>
         </ul>
       </div>
     </div>

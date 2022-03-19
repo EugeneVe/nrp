@@ -100,10 +100,10 @@ nav {
     margin: 0;
     color: var(--white);
   }
-  @media (orientation: portrait) {
+  @media screen and(max-width:760px) {
     padding: 3px 10px 3px 10px;
     margin: 3vh !important;
-    transform: translateX(100vw);
+    // transform: translateX(100vw);
     transition: transform 200ms;
   }
 }
@@ -113,7 +113,7 @@ nav {
 }
 
 #navbar__content {
-  @media (orientation: portrait) {
+  @media screen and(max-width:760px) {
     margin: 0 0 1vw 0;
   }
   display: contents;
@@ -164,10 +164,12 @@ nav {
   color: var(--white);
   text-decoration: none;
   letter-spacing: 3px;
-  font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
   margin: 0 1vw 0 1vw;
+  span {
+    font-weight: 500 !important;
+  }
 }
 
 .burger_wrap {
@@ -192,7 +194,7 @@ nav {
   transition: all 200ms ease;
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media screen and(max-width:760px) {
   .nav-links {
     position: fixed;
     right: 0px;

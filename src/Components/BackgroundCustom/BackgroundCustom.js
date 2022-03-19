@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Tooltip from '@mui/material/Tooltip';
 import { ReactComponent as Bg } from 'assests/images/bg.svg';
 import { ReactComponent as Loader } from 'assests/images/Double Ring-1s-200px.svg';
+import { ReactComponent as Remove } from 'assests/images/remove.svg';
 import './BackgroundCustom.scss';
 
 const BackgroundCustom = () => {
@@ -40,11 +41,21 @@ const BackgroundCustom = () => {
   return (
     <>
       <Tooltip
-        arrow
+        componentsProps={{
+          tooltip: {
+            sx: {
+              bgcolor: 'var(--darkgray)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: '30px',
+            },
+          },
+        }}
         title={
           selectedBg?.length > 0 ? (
             <div className="remove-bg" onClick={removeBg}>
-              <button>Remove background</button>
+              <button className="remove-bg-btn">
+                <Remove />
+              </button>
             </div>
           ) : (
             <span className="tooltip-own-bg">Select own background</span>
