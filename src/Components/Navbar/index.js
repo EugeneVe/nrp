@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AllContext } from 'AllContext';
 import { ReactComponent as Night } from 'assests/images/night.svg';
@@ -28,12 +28,16 @@ export const Burger = () => {
 const NavBar = () => {
   const [name, setName] = useContext(AllContext);
   const [enterName, setEnterName] = useState('');
-  const [dayNight, setDayNight] = useState(true);
+  const [dayNight, setDayNight] = useState(() => localStorage.getItem('day-night') === 'true');
   const whiteColor = '--white';
   const darkColor = '--darkgray';
 
   const changeColor = () => {
     setDayNight(!dayNight);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('day-night', dayNight);
     if (dayNight) {
       document.documentElement.style.setProperty(whiteColor, 'rgba(20, 20, 20, 1)');
       document.documentElement.style.setProperty(darkColor, 'rgba(255,255,255,0.5)');
@@ -41,7 +45,7 @@ const NavBar = () => {
       document.documentElement.style.setProperty(whiteColor, 'rgba(255,255,255,0.9)');
       document.documentElement.style.setProperty(darkColor, 'rgba(32, 36, 39, 0.5)');
     }
-  };
+  }, [dayNight]);
 
   return (
     <div>
@@ -57,7 +61,7 @@ const NavBar = () => {
         <div className="nav-links">
           <Links />
           <button className="black-white" onClick={changeColor}>
-            {dayNight ? <Night /> : <Day />}
+            {dayNight ? <Day /> : <Night />}
           </button>
           <div className="name-enter-wrapper">
             <button onClick={() => setEnterName(!enterName)} title="Enter your name">
