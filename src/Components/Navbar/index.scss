@@ -1,4 +1,4 @@
-@import 'sass/mixinsvars.scss';
+@import "sass/mixinsvars.scss";
 
 // NAVBAR
 .nav_blur {
@@ -151,10 +151,14 @@ nav {
       @include neomorphBoxHover;
       transform: scale(1.1);
     }
+    &:hover > svg {
+      transform: rotate(20deg);
+    }
     svg {
       fill: var(--white);
       width: 18px;
       height: 18px;
+      transition: all 300ms;
     }
   }
 }

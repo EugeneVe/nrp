@@ -1,4 +1,4 @@
-@import 'sass/mixinsvars.scss';
+@import "sass/mixinsvars.scss";
 
 label {
   display: flex !important;
@@ -64,10 +64,10 @@ label {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
   transform: translate(50%, -50%);
   backdrop-filter: blur(15px);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 320px;
   height: 200px;
-  z-index: 999999;
+  z-index: 5;
   h2 {
     color: var(--white);
     opacity: 0.6;
