@@ -19,4 +19,15 @@
       margin-bottom: 3px;
     }
   }
+  @media screen and(max-width:768px) {
+    top: 60px;
+    left: 30px;
+  }
+  @media screen and(max-height:680px) {
+    top: 10px;
+    p,
+    h1 {
+      font-size: 14px;
+    }
+  }
 }

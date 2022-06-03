@@ -1,10 +1,7 @@
-@import '../sass/mixinsvars.scss';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
+@import "../sass/mixinsvars.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap");
 
 // Main Style
-div [alt='www.000webhost.com'] {
-  display: none;
-}
 html {
   box-sizing: border-box;
 }
@@ -14,7 +11,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   font-weight: 400 !important;
 }
 

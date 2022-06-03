@@ -7,22 +7,11 @@ import Links from "Components/Links";
 import { ReactComponent as Signature } from "assests/images/signature.svg";
 import "./index.scss";
 
-//Toggle Nav
 export const Burger = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
   nav.classList.toggle("nav-active");
   burger.classList.toggle("toggle");
-  // const navLinks = document.querySelectorAll('.navLis_animation');
-  //Animate Links
-  // navLinks.forEach((link, index) => {
-  //   if (link.style.animation) {
-  //     link.style.animation = ''; //animate each time u open burger
-  //   } else {
-  //     link.style.animation = `navLinkFade 200ms ease forwards ${index / 5 + 0.2}s`;
-  //   }
-  // });
-  //Burger Animation
 };
 
 const NavBar = () => {

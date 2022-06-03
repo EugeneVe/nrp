@@ -21,7 +21,7 @@ nav {
   align-items: center;
   height: var(--nav_heigth);
   margin: 3px;
-  z-index: 9;
+  z-index: 2;
   .name-enter-wrapper {
     display: flex;
     justify-content: center;
@@ -210,7 +210,7 @@ nav {
     border-radius: 15px;
     flex-direction: column;
     align-items: center;
-    width: calc(100vw - 6px);
+    width: calc(100vw - 12px);
     transform: translateX(110vw);
     transition: transform 200ms ease-in;
   }

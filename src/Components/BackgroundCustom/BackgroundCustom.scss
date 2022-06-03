@@ -64,17 +64,18 @@ label {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
   transform: translate(50%, -50%);
   backdrop-filter: blur(15px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--darkgray);
   width: 320px;
   height: 200px;
-  z-index: 5;
+  z-index: 10;
   h2 {
     color: var(--white);
-    opacity: 0.6;
+    opacity: 0.8;
     margin: 0;
     svg {
       width: 100px;
       height: 100px;
+      stroke: var(--white);
     }
   }
 }
